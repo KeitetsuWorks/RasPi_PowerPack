@@ -1,5 +1,5 @@
 /**
- * @file        keyboard.c
+ * @file        key.c
  * @brief       キー入力処理
  * @author      Keitetsu
  * @date        2016/10/09
