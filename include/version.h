@@ -10,5 +10,5 @@
 
 #pragma once    // __VERSION_H__
 
-#define VERSION             "1.00"          /*!< バージョン情報はGitのタグで管理 */
+//#define VERSION           "1.00"          /*!< バージョン情報はGitのタグで管理 */
 
