@@ -43,7 +43,7 @@ void initDashboard(POWERPACK_T powerpack);
 
 /**
  * @brief   逆転ハンドル 位置の表示更新
- * @param[in]       reverser        進行方向
+ * @param[in]       reverser        逆転ハンドルのハンドル位置
  */
 void redisplayReverserPosition(int reverser);
 
