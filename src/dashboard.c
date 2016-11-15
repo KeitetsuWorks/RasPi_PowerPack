@@ -119,9 +119,9 @@ void redisplayPowerPackStatus(POWERPACK_T powerpack)
 void printPowerPackStatus(POWERPACK_T powerpack)
 {
     const char *reverser_position[POWERPACK_REVERSER_E_NUM] = {
-        "  OFF  ",      /*!< 切 */
-        "<< F   ",      /*!< 前 */
-        "   R >>"       /*!< 後 */
+        "  OFF  ",      // 切
+        "<< F   ",      // 前
+        "   R >>"       // 後
     };
 
     printf("\x1b[0K");
