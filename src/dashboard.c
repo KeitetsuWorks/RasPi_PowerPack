@@ -24,7 +24,7 @@ static void printReverser(void);
 
 /**
  * @brief   逆転ハンドル 位置の表示
- * @param[in]       direction       進行方向
+ * @param[in]       reverser        進行方向
  */
 static void printReverserPosition(int reverser);
 

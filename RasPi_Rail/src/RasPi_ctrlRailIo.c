@@ -23,11 +23,11 @@ int RasPi_ctrlRailIo(
     int forward_value, backward_value, pwm_duty;
     int result = RAIL_SUCCESS;
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_CTRLRAILIO
     printf("Call:   RasPi_ctrlRailIo\n");
 #endif
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_CTRLRAILIO
     printf("  Direction: %4d\n", direction_req);
     printf("  Speed:     %4d\n", pwm_duty_req);
 #endif
@@ -68,7 +68,7 @@ int RasPi_ctrlRailIo(
     digitalWrite(target.backward.port, backward_value);
     pwmWrite(target.pwm.port, pwm_duty);
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_CTRLRAILIO
     printf("Return: RasPi_ctrlRailIo: 0x%08x\n", result);
 #endif
 

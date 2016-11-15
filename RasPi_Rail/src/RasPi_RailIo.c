@@ -23,20 +23,20 @@ int RasPi_initRailIo(void)
     result = RAIL_SUCCESS;
     retval = 0;
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
     printf("Call:   RasPi_initRailIo\n");
 #endif
 
     retval = wiringPiSetupGpio();
     if(retval == -1) {
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
         printf("Error:  wiringPiSetupGpio\n");
 #endif
 
         result = RAIL_FAILURE;
     }
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
     printf("Return: RasPi_initRailIo: 0x%08x\n", result);
 #endif
 
@@ -54,11 +54,11 @@ int RasPi_configRailIo(RAIL_IO_T target)
     result = RAIL_SUCCESS;
     retval = 0;
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
     printf("Call:   RasPi_configRailIo\n");
 #endif
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
     printf("  Forward:  RasPi Port: %3d\n", target.forward.port);
     printf("  Backward: RasPi Port: %3d\n", target.backward.port);
     printf("  PWM:      RasPi Port: %3d\n", target.pwm.port);
@@ -82,12 +82,12 @@ int RasPi_configRailIo(RAIL_IO_T target)
     retval = RasPi_ctrlRailIo(target, direction, pwm_duty);
     result |= retval;
     if(retval != 0) {
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
         printf("Error:  RasPi_ctrlRailIo\n");
 #endif
     }
 
-#ifdef _DEBUG
+#ifdef _DEBUG_RASPI_RAILIO
     printf("Return: RasPi_configRailIo: 0x%08x\n", result);
 #endif
 
