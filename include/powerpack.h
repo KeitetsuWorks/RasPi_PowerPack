@@ -32,7 +32,7 @@
 #define POWERPACK_FORWARD_PORT              22          /*!< 前進信号のGPIOポート番号 */
 #define POWERPACK_BACKWARD_PORT             23          /*!< 後進信号のGPIOポート番号 */
 #define POWERPACK_PWM_PORT                  18          /*!< 速度制御信号のPWMポート番号 */
-#define POWERPACK_PWM_DIVISOR               3           /*!< PWM制御用タイマの分周比（約24kHz） */
+#define POWERPACK_PWM_DIVISOR               3           /*!< PWM制御用タイマの分周比（約25kHz） */
 #define POWERPACK_PWM_RANGE                 256         /*!< PWM制御用タイマの分解能 */
 #define POWERPACK_PWM_MIN                   0           /*!< 最低PWMデューティ */
 #define POWERPACK_PWM_MAX                   255         /*!< 最大PWMデューティ */
@@ -46,8 +46,12 @@
 
 #define POWERPACK_SPEED_MIN                 0           /*!< パワーパックの最低速度 */
 #define POWERPACK_SPEED_MAX                 100         /*!< パワーパックの最高速度 */
+#define POWERPACK_SPEED_UP_STEP             2           /*!< パワーパックの加速度 */
+#define POWERPACK_SPEED_DOWN_STEP           2           /*!< パワーパックの減速度 */
 #define POWERPACK_LIGHT_MIN                 0           /*!< パワーパックの最小常点灯出力 */
 #define POWERPACK_LIGHT_MAX                 100         /*!< パワーパックの最大常点灯出力 */
+#define POWERPACK_LIGHT_UP_STEP             2           /*!< パワーパックの常点灯出力上昇度 */
+#define POWERPACK_LIGHT_DOWN_STEP           2           /*!< パワーパックの常点灯出力下降度 */
 /*! @} */
 
 

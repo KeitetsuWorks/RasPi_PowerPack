@@ -57,6 +57,12 @@ static void printSpeedometerNeedle(int speed);
 
 void initDashboard(POWERPACK_T powerpack)
 {
+    // 画面クリア
+    printf("\x1b[2J");
+
+    // カーソルを1行目先頭に移動
+    printf("\x1b[1;1H");
+
     // 逆転ハンドル
     printReverser();
     printReverserPosition(powerpack.reverser);
@@ -72,15 +78,18 @@ void initDashboard(POWERPACK_T powerpack)
     // パワーパックの状態
     printPowerPackStatus(powerpack);
 
+    // カーソルを待機位置に移動
+    printf("\x1b[%d;1H", LINE_CURSOR);
+
     return;
 }
 
 
 void redisplayReverserPosition(int reverser)
 {
-    printf("\x1b[%dA", LINE_REVERSER_POSITION);
+    printf("\x1b[%d;1H", LINE_REVERSER_POSITION);
     printReverserPosition(reverser);
-    printf("\x1b[%dB", LINE_REVERSER_POSITION - 1);
+    printf("\x1b[%d;1H", LINE_CURSOR);
 
     return;
 }
@@ -88,9 +97,9 @@ void redisplayReverserPosition(int reverser)
 
 void redisplayLightingVolumeNeedle(int light)
 {
-    printf("\x1b[%dA", LINE_LIGHTINGVOLUME_NEEDLE);
+    printf("\x1b[%d;1H", LINE_LIGHTINGVOLUME_NEEDLE);
     printLightingVolumeNeedle(light);
-    printf("\x1b[%dB", LINE_LIGHTINGVOLUME_NEEDLE - 1);
+    printf("\x1b[%d;1H", LINE_CURSOR);
 
     return;
 }
@@ -98,9 +107,9 @@ void redisplayLightingVolumeNeedle(int light)
 
 void redisplaySpeedometerNeedle(int speed)
 {
-    printf("\x1b[%dA", LINE_SPEEDOMETER_NEEDLE);
+    printf("\x1b[%d;1H", LINE_SPEEDOMETER_NEEDLE);
     printSpeedometerNeedle(speed);
-    printf("\x1b[%dB", LINE_SPEEDOMETER_NEEDLE);
+    printf("\x1b[%d;1H", LINE_CURSOR);
     
     return;
 }
@@ -108,9 +117,9 @@ void redisplaySpeedometerNeedle(int speed)
 
 void redisplayPowerPackStatus(POWERPACK_T powerpack)
 {
-    printf("\x1b[%dA", LINE_POWERPACK_STATUS);
+    printf("\x1b[%d;1H", LINE_POWERPACK_STATUS);
     printPowerPackStatus(powerpack);
-    printf("\x1b[%dB", LINE_POWERPACK_STATUS - 1);
+    printf("\x1b[%d;1H", LINE_CURSOR);
     
     return;
 }

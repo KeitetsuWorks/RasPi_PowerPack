@@ -75,9 +75,9 @@ int RasPi_configRailIo(RAIL_IO_T target)
 
     // PWM設定
     pinMode(target.pwm.port, PWM_OUTPUT);
-    pwmSetMode(PWM_MODE_BAL);
     pwmSetClock(target.pwm.divisor);
     pwmSetRange(target.pwm.range);
+    pwmSetMode(PWM_MODE_MS);
 
     retval = RasPi_ctrlRailIo(target, direction, pwm_duty);
     result |= retval;

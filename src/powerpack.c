@@ -131,6 +131,7 @@ int main(
     struct option longopts[] = {
         { "divisor",    required_argument,  NULL,   'd' },
         { "help",       no_argument,        NULL,   'h' },
+        { "keymap",     no_argument,        NULL,   'k' },
         { "simple",     no_argument,        NULL,   's' },
         { "timer",      required_argument,  NULL,   't' },
         { "version",    no_argument,        NULL,   'v' },
@@ -154,9 +155,12 @@ int main(
     flag_timer = TRUE;
 
     // コマンドオプション処理
-    while(((opt = getopt_long(argc, argv, "d:hst:v", longopts, &optlong_index)) != -1)
-            && (flag_error == FALSE)
-            && (flag_exit == FALSE)) {
+    while((flag_error == FALSE) && (flag_exit == FALSE)) {
+        opt = getopt_long(argc, argv, "d:hkst:v", longopts, &optlong_index);
+        if(opt == -1) {
+            break;
+        }
+
         switch(opt) {
             case 'd':
                 rail.pwm.divisor = atoi(optarg);
@@ -173,6 +177,10 @@ int main(
                 printHelp();
                 flag_exit = TRUE;
                 break;
+            case 'k':
+                printKeymap();
+                flag_exit = TRUE;
+                break;
             case 's':
                 flag_simple = TRUE;
                 break;
@@ -184,7 +192,7 @@ int main(
                 }
                 else if(timer_period < POWERPACK_TIMEOUT_PERIOD_MIN
                         || timer_period > POWERPACK_TIMEOUT_PERIOD_MAX) {
-                    printf("Error:  invalid timer period: %d\n",
+                    printf("Error:  invalid time-out period: %d\n",
                             timer_period);
                     flag_timer = FALSE;
                     flag_error = TRUE;
@@ -263,8 +271,8 @@ int main(
                 timer_enable,
                 timer_period);
         if(retval == TRUE) {    // タイムアウト発生の場合
-            // ユーザ操作コードをパワーパックの終了に更新
-            operation = POWERPACK_EXIT;
+            // ユーザ操作コードを非常制動に置換え
+            operation = POWERPACK_BRAKE_E;
         }
 
         // 終了フラグの更新
@@ -520,10 +528,10 @@ static void updatePowerPackSpeed(
 
     switch(operation) {
         case POWERPACK_SPEED_UP:
-            speed_work++;
+            speed_work += POWERPACK_SPEED_UP_STEP;
             break;
         case POWERPACK_SPEED_DOWN:
-            speed_work--;
+            speed_work -= POWERPACK_SPEED_DOWN_STEP;
             break;
         default:
             break;
@@ -552,10 +560,10 @@ static void updatePowerPackLightingVolume(
 
     switch(operation) {
         case POWERPACK_LIGHT_UP:
-            light_work++;
+            light_work += POWERPACK_LIGHT_UP_STEP;
             break;
         case POWERPACK_LIGHT_DOWN:
-            light_work--;
+            light_work -= POWERPACK_LIGHT_DOWN_STEP;
             break;
         default:
             break;

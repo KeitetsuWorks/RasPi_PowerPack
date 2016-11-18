@@ -18,6 +18,12 @@ void printHelp(void);
 
 
 /**
+ * @brief   キーマップの表示関数
+ */
+void printKeymap(void);
+
+
+/**
  * @brief   バージョン情報の表示関数
  */
 void printVersion(void);

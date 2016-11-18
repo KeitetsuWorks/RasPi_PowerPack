@@ -15,21 +15,22 @@
  * @name    エスケープシーケンスによる表示スタイル設定
  */
 /*! @{ */
-#define ESCCODE_REVERSER_SCALE      36              /*!< 逆転ハンドルの目盛 */
-#define ESCCODE_REVERSER_LINE       34              /*!< 逆転ハンドルの目盛線 */
-#define ESCCODE_REVERSER_POSITION   33              /*!< 逆転ハンドルの位置 */
-#define ESCCODE_REVERSER_CHAR       36              /*!< 逆転ハンドルの文字 */
+#define ESCCODE_REVERSER_SCALE          36      /*!< 逆転ハンドルの目盛 */
+#define ESCCODE_REVERSER_LINE           34      /*!< 逆転ハンドルの目盛線 */
+#define ESCCODE_REVERSER_POSITION       33      /*!< 逆転ハンドルの位置 */
+#define ESCCODE_REVERSER_CHAR           36      /*!< 逆転ハンドルの文字 */
 /*! @} */
 
 
 /**
- * @name    表示開始行（最下行基準）
+ * @name    表示開始行（1行目基準）
  */
 /*! @{ */
-#define LINE_REVERSER_POSITION          11      /*!< 逆転ハンドル 位置の表示開始行 */
+#define LINE_REVERSER_POSITION          3       /*!< 逆転ハンドル 位置の表示開始行 */
 #define LINE_LIGHTINGVOLUME_NEEDLE      7       /*!< 常点灯調整ボリューム 針の表示開始行 */
-#define LINE_SPEEDOMETER_NEEDLE         3       /*!< 速度調整ボリューム 針の表示開始行 */
-#define LINE_POWERPACK_STATUS           1       /*!< パワーパックの状態 テキスト表示開始行 */
+#define LINE_SPEEDOMETER_NEEDLE         11      /*!< 速度調整ボリューム 針の表示開始行 */
+#define LINE_POWERPACK_STATUS           13      /*!< パワーパックの状態 テキスト表示開始行 */
+#define LINE_CURSOR                     14      /*!< カーソル待機行 */
 /*! @} */
 
 
