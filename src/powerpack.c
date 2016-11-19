@@ -508,6 +508,7 @@ static void updatePowerPackReverser(
                     reverser_work = POWERPACK_OFF;
                     break;
             }
+            break;
         default:
             break;
     }
