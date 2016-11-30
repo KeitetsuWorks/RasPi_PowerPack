@@ -43,7 +43,6 @@
  * @name    パワーパックの設定
  */
 /*! @{ */
-
 #define POWERPACK_SPEED_MIN                 0           /*!< パワーパックの最低速度 */
 #define POWERPACK_SPEED_MAX                 100         /*!< パワーパックの最高速度 */
 #define POWERPACK_SPEED_UP_STEP             2           /*!< パワーパックの加速度 */
