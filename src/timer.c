@@ -55,7 +55,7 @@ int isTimeout(
             printf("  interval: %ld\n", (long)interval);
 #endif
 
-            if(interval > period) {      // タイムアウト発生の場合
+            if(interval >= period) {    // タイムアウト発生の場合
                 timeout = TRUE;
             }
         }
