@@ -342,9 +342,7 @@ static void initPowerPackRailIoInfo(
         RAIL_IO_T *rail)
 {
     rail->forward.port = POWERPACK_FORWARD_PORT;
-    rail->forward.direction = GPIO_OUTPUT;
     rail->backward.port = POWERPACK_BACKWARD_PORT;
-    rail->backward.direction = GPIO_OUTPUT;
     rail->pwm.port = POWERPACK_PWM_PORT;
     rail->pwm.divisor = POWERPACK_PWM_DIVISOR;
     rail->pwm.range = POWERPACK_PWM_RANGE;

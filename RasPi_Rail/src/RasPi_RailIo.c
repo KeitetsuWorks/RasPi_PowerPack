@@ -70,8 +70,8 @@ int RasPi_configRailIo(RAIL_IO_T target)
     pwm_duty = target.pwm.min;
 
     // GPIO設定
-    pinMode(target.forward.port, target.forward.direction);
-    pinMode(target.backward.port, target.backward.direction);
+    pinMode(target.forward.port, OUTPUT);
+    pinMode(target.backward.port, OUTPUT);
 
     // PWM設定
     pinMode(target.pwm.port, PWM_OUTPUT);

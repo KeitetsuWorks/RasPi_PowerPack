@@ -10,8 +10,6 @@
 
 #pragma once    // __RASPI_RAIL_H__
 
-#include <wiringPi.h>
-
 
 /**
  * @name    関数戻り値
@@ -28,15 +26,6 @@
 /*! @{ */
 #define RAIL_INVALID_DIRECTION      0x00000002      /*!< 無効な進行方向 */
 #define RAIL_INVALID_PWM_DUTY       0x00000004      /*!< 無効なPWMデューティ */
-/*! @} */
-
-
-/**
- * @name    GPIOポートの入出力方向
- */
-/*! @{ */
-#define GPIO_INPUT                  INPUT           /*!< GPIO入力ポート */
-#define GPIO_OUTPUT                 OUTPUT          /*!< GPIO出力ポート */
 /*! @} */
 
 
@@ -80,32 +69,31 @@ typedef enum rail_direction_e {
 
 
 /**
- * @struct  gpio_t
+ * @struct  rail_gpio_t
  * @brief   GPIOポートの情報
  *
- * @typedef GPIO_T
+ * @typedef RAIL_GPIO_T
  * @brief   GPIOポートの情報
  */
-typedef struct gpio_t {
+typedef struct rail_gpio_t {
     int port;                   /*!< GPIOポート番号 */
-    int direction;              /*!< GPIOポートの入出力方向 */
-} GPIO_T;
+} RAIL_GPIO_T;
 
 
 /**
- * @struct  pwm_t
+ * @struct  rail_pwm_t
  * @brief   PWMポートの情報
  *
- * @typedef PWM_T
+ * @typedef RAIL_PWM_T
  * @brief   PWMポートの情報
  */
-typedef struct pwm_t {
+typedef struct rail_pwm_t {
     int port;                   /*!< PWMポート番号 */
     int divisor;                /*!< PWM制御用タイマの分周比 */
     int range;                  /*!< PWM制御用タイマの分解能 */
     int min;                    /*!< 最小PWMデューティ */
     int max;                    /*!< 最大PWMデューティ */
-} PWM_T;
+} RAIL_PWM_T;
 
 
 /**
@@ -116,18 +104,38 @@ typedef struct pwm_t {
  * @brief   線路制御インタフェース情報
  */
 typedef struct rail_io_t {
-    GPIO_T forward;             /*!< 前進制御信号のGPIOポート番号 */
-    GPIO_T backward;            /*!< 後進制御信号のGPIOポート番号 */
-    PWM_T pwm;                  /*!< 出力制御信号のPWMポート番号 */
+    RAIL_GPIO_T forward;        /*!< 前進制御信号のGPIOポート番号 */
+    RAIL_GPIO_T backward;       /*!< 後進制御信号のGPIOポート番号 */
+    RAIL_PWM_T pwm;             /*!< 出力制御信号のPWMポート番号 */
 } RAIL_IO_T;
 
 
 // プロトタイプ宣言
 // RasPi_RailIo.h
+/**
+ * @brief   線路制御インタフェースの初期化
+ * @retval          RAIL_SUCCESS    正常終了
+ * @retval          RAIL_FAILURE    異常終了
+ */
 extern int RasPi_initRailIo(void);
+
+
+/**
+ * @brief   線路制御インタフェースの設定
+ * @param[in]       target          線路制御インタフェース情報
+ * @retval          RAIL_SUCCESS    正常終了
+ * @retval          RAIL_FAILURE    異常終了
+ */
 extern int RasPi_configRailIo(RAIL_IO_T target);
 
 // RasPi_ctrlRailIo.h
+/**
+ * @brief   進行方向/出力制御関数
+ * @param[in]       target          線路制御インタフェース情報
+ * @param[in]       direciton_req   線路上の列車の進行方向
+ * @param[in]       pwm_duty_req    出力制御信号のPWMデューティ
+ * @return          エラー情報
+ */
 extern int RasPi_ctrlRailIo(
         RAIL_IO_T target,
         int direciton_req,
