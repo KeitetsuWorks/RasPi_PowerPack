@@ -320,7 +320,7 @@ int main(
             if((powerpack.reverser != powerpack_prev.reverser)
                     || (powerpack.light != powerpack_prev.light)
                     || (powerpack.speed != powerpack_prev.speed)) {
-                    redisplayPowerPackStatus(powerpack);
+                redisplayPowerPackStatus(powerpack);
             }
         }
         else {
