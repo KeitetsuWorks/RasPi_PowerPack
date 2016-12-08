@@ -69,17 +69,3 @@ void redisplaySpeedometerNeedle(int speed);
  */
 void redisplayPowerPackStatus(POWERPACK_T powerpack);
 
-
-/**
- * @brief   パワーパックの状態 テキスト表示
- * @param[in]       powerpack       パワーパックの状態管理構造体
- */
-void printPowerPackStatus(POWERPACK_T powerpack);
-
-
-/**
- * @brief   出力制御信号のPWMデューティ テキスト表示
- * @param[in]       pwm_duty        出力制御信号のPWMデューティ
- */
-void printPowerPackRailPwmDuty(int pwm_duty);
-

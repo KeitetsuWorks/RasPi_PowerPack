@@ -55,6 +55,13 @@ static void printSpeedometerScale(void);
 static void printSpeedometerNeedle(int speed);
 
 
+/**
+ * @brief   パワーパックの状態 テキスト表示
+ * @param[in]       powerpack       パワーパックの状態管理構造体
+ */
+static void printPowerPackStatus(POWERPACK_T powerpack);
+
+
 void initDashboard(POWERPACK_T powerpack)
 {
     // 画面クリア
@@ -121,39 +128,6 @@ void redisplayPowerPackStatus(POWERPACK_T powerpack)
     printPowerPackStatus(powerpack);
     printf("\x1b[%d;1H", LINE_CURSOR);
     
-    return;
-}
-
-
-void printPowerPackStatus(POWERPACK_T powerpack)
-{
-    const char *reverser_position[POWERPACK_REVERSER_E_NUM] = {
-        "  OFF  ",      // 切
-        "<< F   ",      // 前
-        "   R >>"       // 後
-    };
-
-    printf("\x1b[0K");
-    printf("Reverser: %8s, Lighting Volume: %4d %%, Speed: %4d %%\n",
-            reverser_position[powerpack.reverser],
-            powerpack.light,
-            powerpack.speed);
-
-    return;
-}
-
-
-void printPowerPackRailPwmDuty(int pwm_duty)
-{
-    int pwm_duty_ratio;
-
-    pwm_duty_ratio = (int)(((double)pwm_duty / POWERPACK_PWM_MAX) * 100);
-
-    printf("PWM Duty: %4d / %4d ( %3d %%)\n",
-            pwm_duty,
-            POWERPACK_PWM_MAX,
-            pwm_duty_ratio);
-
     return;
 }
 
@@ -226,6 +200,24 @@ static void printSpeedometerScale(void)
 static void printSpeedometerNeedle(int speed)
 {
     printMeter100Needle(speed);
+
+    return;
+}
+
+
+static void printPowerPackStatus(POWERPACK_T powerpack)
+{
+    const char *reverser_position[POWERPACK_REVERSER_E_NUM] = {
+        "  OFF  ",      // 切
+        "<< F   ",      // 前
+        "   R >>"       // 後
+    };
+
+    printf("\x1b[0K");
+    printf("Reverser: %8s, Lighting Volume: %4d %%, Speed: %4d %%\n",
+            reverser_position[powerpack.reverser],
+            powerpack.light,
+            powerpack.speed);
 
     return;
 }

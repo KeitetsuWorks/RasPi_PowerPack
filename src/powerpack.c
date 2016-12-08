@@ -17,6 +17,7 @@
 #include "powerpack.h"
 #include "help.h"
 #include "dashboard.h"
+#include "dashboard_simple.h"
 #include "key.h"
 #include "timer.h"
 
@@ -49,10 +50,22 @@ static void updatePowerPackStatus(
 
 
 /**
+ * @brief   ユーザ操作の開始処理
+ */
+static void startPowerPackUserOperation(void);
+
+
+/**
+ * @brief   ユーザ操作の停止処理
+ */
+static void stopPowerPackUserOperation(void);
+
+
+/**
  * @brief   キー入力からユーザ操作を取得
  * @return  パワーパックのユーザ操作コード
  */
-static int getPowerPackOperation(void);
+static int getPowerPackUserOperation(void);
 
 
 /**
@@ -187,7 +200,7 @@ int main(
             case 't':
                 timer_period = atoi(optarg);
                 if(timer_period == 0) {
-                    printf("Info:   automatic exit timer: disable\n");
+                    printf("Info:   automatic stop timer: disable\n");
                     flag_timer = FALSE;
                 }
                 else if(timer_period < POWERPACK_TIMEOUT_PERIOD_MIN
@@ -244,18 +257,16 @@ int main(
         initDashboard(powerpack);
     }
     else {
-        printPowerPackStatus(powerpack);
-        printPowerPackRailPwmDuty(rail_pwm_duty);
-        printf("\n");
+        initSimpleDashboard(powerpack, rail_pwm_duty);
     }
-    openKey();
+    startPowerPackUserOperation();
 
     // メインループ処理
     flag_error = FALSE;
     flag_exit = FALSE;
     while((flag_error == FALSE) && (flag_exit == FALSE)) {
         // ユーザ操作の取得
-        operation = getPowerPackOperation();
+        operation = getPowerPackUserOperation();
 
         // 無操作検出タイマ イネーブルフラグの更新
         if(flag_timer == TRUE && (operation == POWERPACK_NO_OPERATION)) {
@@ -316,9 +327,7 @@ int main(
             if((powerpack.reverser != powerpack_prev.reverser)
                     || (powerpack.light != powerpack_prev.light)
                     || (powerpack.speed != powerpack_prev.speed)) {
-                printPowerPackStatus(powerpack);
-                printPowerPackRailPwmDuty(rail_pwm_duty);
-                printf("\n");
+                redisplaySimpleDashboard(powerpack, rail_pwm_duty);
             }
         }
 
@@ -328,7 +337,7 @@ int main(
     }
 
     // ユーザインタフェースの終了処理
-    closeKey();
+    stopPowerPackUserOperation();
 
     if(flag_error != FALSE) {
         exit(EXIT_FAILURE);
@@ -353,7 +362,19 @@ static void initPowerPackRailIoInfo(
 }
 
 
-static int getPowerPackOperation(void)
+static void startPowerPackUserOperation(void)
+{
+    openKey();
+}
+
+
+static void stopPowerPackUserOperation(void)
+{
+    closeKey();
+}
+
+
+static int getPowerPackUserOperation(void)
 {
     int operation;
     int key;
