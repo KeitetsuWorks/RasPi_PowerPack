@@ -61,7 +61,6 @@ static void printPowerPackStatus(POWERPACK_T powerpack)
         "   R >>"       // 後
     };
 
-    printf("\x1b[0K");
     printf("Reverser: %8s, Lighting Volume: %4d %%, Speed: %4d %%\n",
             reverser_position[powerpack.reverser],
             powerpack.light,
