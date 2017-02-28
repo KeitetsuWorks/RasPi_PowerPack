@@ -9,11 +9,10 @@
  */
 
 #include <stdio.h>
-#include <unistd.h>
 #include <termios.h>
+#include <unistd.h>
 #include <fcntl.h>
 #include <errno.h>
-#include <sys/types.h>
 
 
 static struct termios tio_backup;   /*!< 端末設定のバックアップ */
