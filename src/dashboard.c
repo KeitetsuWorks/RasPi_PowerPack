@@ -15,7 +15,6 @@
 #include "dashboard.h"
 
 
-// プロトタイプ宣言
 /**
  * @brief   逆転ハンドル 目盛の表示
  */

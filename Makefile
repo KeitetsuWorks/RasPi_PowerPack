@@ -20,31 +20,31 @@ LDFLAGS      = -L/usr/local/lib -lwiringPi
 LIBS         =
 INCLUDE      = -I./include -I./RasPi_Rail/include -I/usr/local/include
 
-DOXYGENDIR   = ./html ./latex
-NOMAKEDIR    = $(DOXYGENDIR) .git%
-SRCDIR       = ./src
-ifeq "$(strip $(SRCDIR))" ""
-	SRCDIR   = .
-endif
-OBJDIR       = ./obj
+DOXYGENDIR   = spec_html
+NOMAKEPATHS  = $(DOXYGENDIR)/% .git%
+OBJDIR       = obj
 ifeq "$(strip $(OBJDIR))" ""
-	OBJDIR   = .
+	OBJDIR = .
 endif
-BINDIR       = ./bin
+BINDIR       = bin
 ifeq "$(strip $(BINDIR))" ""
 	BINDIR = .
 endif
 
-CALLSRCS     = $(shell find * -name *.c)
-CXXALLSRCS   = $(shell find * -name *.cpp)
-CSRCS        = $(filter-out $(NOMAKEDIR), $(CALLSRCS))
-CXXSRCS      = $(filter-out $(NOMAKEDIR), $(CALLXXSRCS))
+CALLSRCS     = $(shell find * -name '*.c')
+CXXALLSRCS   = $(shell find * -name '*.cpp')
+CSRCS        = $(filter-out $(NOMAKEPATHS), $(CALLSRCS))
+CXXSRCS      = $(filter-out $(NOMAKEPATHS), $(CXXALLSRCS))
 SRCS         = $(CSRCS) $(CXXSRCS)
-SRCDIRS      = $(dir $(SRCS))$
+CSRCDIRS     = $(dir $(CSRCS))
+CXXSRCDIRS   = $(dir $(CXXSRCS))
+SRCDIRS      = $(CSRCDIRS) $(CXXSRCDIRS)
 COBJS        = $(addprefix $(OBJDIR)/, $(patsubst %.c, %.o, $(CSRCS)))
 CXXOBJS      = $(addprefix $(OBJDIR)/, $(patsubst %.cpp, %.o, $(CXXSRCS)))
 OBJS         = $(COBJS) $(CXXOBJS)
-OBJDIRS      = $(addprefix $(OBJDIR)/, $(SRCDIRS))
+COBJDIRS     = $(addprefix $(OBJDIR)/, $(CSRCDIRS))
+CXXOBJDIRS   = $(addprefix $(OBJDIR)/, $(CXXSRCDIRS))
+OBJDIRS      = $(COBJDIRS) $(CXXOBJDIRS)
 DEPS         = $(OBJS:.o=.d)
 TARGET       = $(BINDIR)/$(shell basename `readlink -f .`)
 
@@ -54,11 +54,12 @@ $(TARGET): $(OBJS) $(LIBS)
 
 $(OBJDIR)/%.o: %.c
 	-mkdir -p $(OBJDIR)
-	-mkdir -p $(OBJDIRS)
+	-mkdir -p $(COBJDIRS)
 	$(CC) $(CFLAGS) $(INCLUDE) -o $@ -c $<
 
 $(OBJDIR)/%.o: %.cpp
 	-mkdir -p $(OBJDIR)
+	-mkdir -p $(CXXOBJDIRS)
 	$(CXX) $(CXXFLAGS) $(INCLUDE) -o $@ -c $<
 
 .PHONY: clean all

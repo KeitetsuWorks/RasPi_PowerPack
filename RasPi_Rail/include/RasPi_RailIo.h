@@ -8,11 +8,9 @@
  *              This software is released under the MIT License.
  */
 
-
 #pragma once    // __RASPI_RAILIO_H__
 
 
-// プロトタイプ宣言
 /**
  * @brief   線路制御インタフェースの初期化
  * @retval          RAIL_SUCCESS    正常終了

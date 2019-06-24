@@ -10,6 +10,7 @@
 
 #pragma once    // __VERSION_H__
 
+
 #ifndef VERSION
 #define VERSION             "1.00"          /*!< バージョン情報はGitのタグで管理 */
 #endif

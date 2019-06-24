@@ -14,7 +14,6 @@
 #include "dashboard_simple.h"
 
 
-// プロトタイプ宣言
 /**
  * @brief   パワーパックの状態 テキスト表示
  * @param[in]       powerpack       パワーパックの状態管理構造体

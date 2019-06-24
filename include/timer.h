@@ -10,8 +10,6 @@
 
 #pragma once    // __TIMER_H__
 
-#include <time.h>
-
 
 /**
  * @name    TRUE/FALSE
@@ -40,7 +38,6 @@ typedef struct timer_t {
 } TIMER_T;
 
 
-// プロトタイプ宣言
 /**
  * @brief   タイマの初期化
  * @param[out]      timer           タイマ状態管理構造体

@@ -11,7 +11,6 @@
 #pragma once    // __DASHBOARD_SIMPLE_H__
 
 
-// プロトタイプ宣言
 /**
  * @brief   パワーパック 計器表示の初期化（シンプル表示）
  * @param[in]       powerpack       パワーパックの状態管理構造体

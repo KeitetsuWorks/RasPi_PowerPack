@@ -71,7 +71,7 @@ dkms.conf
 
 
 ### RasPi_PowerPack ###
-html/
+spec_html/
 latex/
 bin/
 obj/

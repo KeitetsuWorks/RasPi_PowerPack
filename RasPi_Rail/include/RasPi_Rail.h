@@ -30,26 +30,21 @@
 
 
 /**
+ * @name    GPIOポートの論理
+ */
+/*! @{ */
+#define GPIO_LOW                    0               /*!< Low */
+#define GPIO_HIGH                   1               /*!< High */
+/*! @} */
+
+
+/**
  * @name    線路電源
  */
 /*! @{ */
 #define RAIL_POWER_OFF              GPIO_LOW        /*!< 線路電源ON */
 #define RAIL_POWER_ON               GPIO_HIGH       /*!< 線路電源OFF */
 /*! @} */
-
-
-/**
- * @enum    gpio_value_e
- * @brief   GPIOポートの論理
- *
- * @typedef GPIO_VALUE_E
- * @brief   GPIOポートの論理
- */
-typedef enum gpio_value_e {
-    GPIO_LOW = 0,               /*!< Low */
-    GPIO_HIGH,                  /*!< High */
-    GPIO_VALUE_E_NUM            /*!< GPIO_VALUE_Eの列挙数 */
-} GPIO_VALUE_E;
 
 
 /**
@@ -110,7 +105,6 @@ typedef struct rail_io_t {
 } RAIL_IO_T;
 
 
-// プロトタイプ宣言
 // RasPi_RailIo.h
 /**
  * @brief   線路制御インタフェースの初期化
@@ -127,6 +121,7 @@ extern int RasPi_initRailIo(void);
  * @retval          RAIL_FAILURE    異常終了
  */
 extern int RasPi_configRailIo(RAIL_IO_T target);
+
 
 // RasPi_ctrlRailIo.h
 /**

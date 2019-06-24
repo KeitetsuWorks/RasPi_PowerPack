@@ -45,12 +45,12 @@
 /*! @{ */
 #define POWERPACK_SPEED_MIN                 0           /*!< パワーパックの最低速度 */
 #define POWERPACK_SPEED_MAX                 100         /*!< パワーパックの最高速度 */
-#define POWERPACK_SPEED_UP_STEP             2           /*!< パワーパックの加速度 */
-#define POWERPACK_SPEED_DOWN_STEP           2           /*!< パワーパックの減速度 */
+#define POWERPACK_SPEED_UP_STEP             1           /*!< パワーパックの加速度 */
+#define POWERPACK_SPEED_DOWN_STEP           1           /*!< パワーパックの減速度 */
 #define POWERPACK_LIGHT_MIN                 0           /*!< パワーパックの最小常点灯出力 */
 #define POWERPACK_LIGHT_MAX                 100         /*!< パワーパックの最大常点灯出力 */
-#define POWERPACK_LIGHT_UP_STEP             2           /*!< パワーパックの常点灯出力上昇度 */
-#define POWERPACK_LIGHT_DOWN_STEP           2           /*!< パワーパックの常点灯出力下降度 */
+#define POWERPACK_LIGHT_UP_STEP             1           /*!< パワーパックの常点灯出力上昇度 */
+#define POWERPACK_LIGHT_DOWN_STEP           1           /*!< パワーパックの常点灯出力下降度 */
 /*! @} */
 
 

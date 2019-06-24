@@ -11,7 +11,6 @@
 #pragma once    // __RASPI_CTRLRAILIO_H__
 
 
-// プロトタイプ宣言
 /**
  * @brief   進行方向/出力制御関数
  * @param[in]       target          線路制御インタフェース情報
