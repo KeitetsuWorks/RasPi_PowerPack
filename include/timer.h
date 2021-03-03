@@ -14,15 +14,15 @@
 /**
  * @name    TRUE/FALSE
  */
-/*! @{ */
+/** @{ */
 #ifndef TRUE
-#define TRUE                1               /*!< 真 */
+#define TRUE                1               /**< 真 */
 #endif
 
 #ifndef FALSE
-#define FALSE               0               /*!< 偽 */
+#define FALSE               0               /**< 偽 */
 #endif
-/*! @} */
+/** @} */
 
 
 /**
@@ -33,8 +33,8 @@
  * @brief   タイマ状態管理構造体
  */
 typedef struct timer_t {
-    int status;             /*!< タイマ状態 */
-    time_t start;           /*!< タイマ開始時間 */
+    int status;             /**< タイマ状態 */
+    time_t start;           /**< タイマ開始時間 */
 } TIMER_T;
 
 

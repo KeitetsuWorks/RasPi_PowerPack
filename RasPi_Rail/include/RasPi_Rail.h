@@ -14,37 +14,37 @@
 /**
  * @name    関数戻り値
  */
-/*! @{ */
-#define RAIL_SUCCESS                0x00000000      /*!< 正常終了 */
-#define RAIL_FAILURE                0x00000001      /*!< 異常終了 */
-/*! @} */
+/** @{ */
+#define RAIL_SUCCESS                0x00000000      /**< 正常終了 */
+#define RAIL_FAILURE                0x00000001      /**< 異常終了 */
+/** @} */
 
 
 /**
  * @name    エラー情報マスク
  */
-/*! @{ */
-#define RAIL_INVALID_DIRECTION      0x00000002      /*!< 無効な進行方向 */
-#define RAIL_INVALID_PWM_DUTY       0x00000004      /*!< 無効なPWMデューティ */
-/*! @} */
+/** @{ */
+#define RAIL_INVALID_DIRECTION      0x00000002      /**< 無効な進行方向 */
+#define RAIL_INVALID_PWM_DUTY       0x00000004      /**< 無効なPWMデューティ */
+/** @} */
 
 
 /**
  * @name    GPIOポートの論理
  */
-/*! @{ */
-#define GPIO_LOW                    0               /*!< Low */
-#define GPIO_HIGH                   1               /*!< High */
-/*! @} */
+/** @{ */
+#define GPIO_LOW                    0               /**< Low */
+#define GPIO_HIGH                   1               /**< High */
+/** @} */
 
 
 /**
  * @name    線路電源
  */
-/*! @{ */
-#define RAIL_POWER_OFF              GPIO_LOW        /*!< 線路電源ON */
-#define RAIL_POWER_ON               GPIO_HIGH       /*!< 線路電源OFF */
-/*! @} */
+/** @{ */
+#define RAIL_POWER_OFF              GPIO_LOW        /**< 線路電源ON */
+#define RAIL_POWER_ON               GPIO_HIGH       /**< 線路電源OFF */
+/** @} */
 
 
 /**
@@ -55,11 +55,11 @@
  * @brief   線路上の列車の進行方向
  */
 typedef enum rail_direction_e {
-    RAIL_STOP = 0,              /*!< 停止 */
-    RAIL_FORWARD,               /*!< 前進 */
-    RAIL_BACKWARD,              /*!< 後進 */
-    RAIL_BRAKE,                 /*!< 制動 */
-    RAIL_DIRECTION_E_NUM        /*!< RAIL_DIRECTION_Eの列挙数 */
+    RAIL_STOP = 0,              /**< 停止 */
+    RAIL_FORWARD,               /**< 前進 */
+    RAIL_BACKWARD,              /**< 後進 */
+    RAIL_BRAKE,                 /**< 制動 */
+    RAIL_DIRECTION_E_NUM        /**< RAIL_DIRECTION_Eの列挙数 */
 } RAIL_DIRECTION_E;
 
 
@@ -71,7 +71,7 @@ typedef enum rail_direction_e {
  * @brief   GPIOポートの情報
  */
 typedef struct rail_gpio_t {
-    int port;                   /*!< GPIOポート番号 */
+    int port;                   /**< GPIOポート番号 */
 } RAIL_GPIO_T;
 
 
@@ -83,11 +83,11 @@ typedef struct rail_gpio_t {
  * @brief   PWMポートの情報
  */
 typedef struct rail_pwm_t {
-    int port;                   /*!< PWMポート番号 */
-    int divisor;                /*!< PWM制御用タイマの分周比 */
-    int range;                  /*!< PWM制御用タイマの分解能 */
-    int min;                    /*!< 最小PWMデューティ */
-    int max;                    /*!< 最大PWMデューティ */
+    int port;                   /**< PWMポート番号 */
+    int divisor;                /**< PWM制御用タイマの分周比 */
+    int range;                  /**< PWM制御用タイマの分解能 */
+    int min;                    /**< 最小PWMデューティ */
+    int max;                    /**< 最大PWMデューティ */
 } RAIL_PWM_T;
 
 
@@ -99,9 +99,9 @@ typedef struct rail_pwm_t {
  * @brief   線路制御インタフェース情報
  */
 typedef struct rail_io_t {
-    RAIL_GPIO_T forward;        /*!< 前進制御信号のGPIOポート番号 */
-    RAIL_GPIO_T backward;       /*!< 後進制御信号のGPIOポート番号 */
-    RAIL_PWM_T pwm;             /*!< 出力制御信号のPWMポート番号 */
+    RAIL_GPIO_T forward;        /**< 前進制御信号のGPIOポート番号 */
+    RAIL_GPIO_T backward;       /**< 後進制御信号のGPIOポート番号 */
+    RAIL_PWM_T pwm;             /**< 出力制御信号のPWMポート番号 */
 } RAIL_IO_T;
 
 

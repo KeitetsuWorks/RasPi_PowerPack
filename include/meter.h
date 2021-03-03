@@ -14,13 +14,13 @@
 /**
  * @name    エスケープシーケンスによる表示スタイル設定
  */
-/*! @{ */
-#define ESCCODE_METER_SCALE_LARGE   36              /*!< メーターの大目盛 */
-#define ESCCODE_METER_SCALE_SMALL   36              /*!< メーターの小目盛 */
-#define ESCCODE_METER_SCALE_LINE    34              /*!< メーターの目盛線 */
-#define ESCCODE_METER_NEEDLE        33              /*!< メーターの針 */
-#define ESCCODE_METER_CHAR          36              /*!< メーターの文字 */
-/*! @} */
+/** @{ */
+#define ESCCODE_METER_SCALE_LARGE   36              /**< メーターの大目盛 */
+#define ESCCODE_METER_SCALE_SMALL   36              /**< メーターの小目盛 */
+#define ESCCODE_METER_SCALE_LINE    34              /**< メーターの目盛線 */
+#define ESCCODE_METER_NEEDLE        33              /**< メーターの針 */
+#define ESCCODE_METER_CHAR          36              /**< メーターの文字 */
+/** @} */
 
 
 /**

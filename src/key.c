@@ -15,8 +15,8 @@
 #include <errno.h>
 
 
-static struct termios tio_backup;   /*!< 端末設定のバックアップ */
-static int fdflag_backup;           /*!< ファイルディスクリプタのバックアップ */
+static struct termios tio_backup;   /**< 端末設定のバックアップ */
+static int fdflag_backup;           /**< ファイルディスクリプタのバックアップ */
 
 
 int openKey(void)
