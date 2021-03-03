@@ -42,8 +42,8 @@
  * @name    線路電源
  */
 /** @{ */
-#define RAIL_POWER_OFF              GPIO_LOW        /**< 線路電源ON */
-#define RAIL_POWER_ON               GPIO_HIGH       /**< 線路電源OFF */
+#define RAIL_POWER_OFF              GPIO_LOW        /**< 線路電源OFF */
+#define RAIL_POWER_ON               GPIO_HIGH       /**< 線路電源ON */
 /** @} */
 
 
