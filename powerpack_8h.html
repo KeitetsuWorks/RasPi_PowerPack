@@ -1,0 +1,586 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Model Railway Power Pack using Raspberry Pi: include/powerpack.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Model Railway Power Pack using Raspberry Pi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('powerpack_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a>  </div>
+  <div class="headertitle">
+<div class="title">powerpack.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>パワーパック 定数定義  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="powerpack_8h__dep__incl.png" border="0" usemap="#ainclude_2powerpack_8hdep" alt=""/></div>
+<map name="ainclude_2powerpack_8hdep" id="ainclude_2powerpack_8hdep">
+<area shape="rect" title="パワーパック 定数定義" alt="" coords="154,5,294,32"/>
+<area shape="rect" href="dashboard_8c.html" title="パワーパック 計器表示処理" alt="" coords="5,80,120,107"/>
+<area shape="rect" href="dashboard__simple_8c.html" title="パワーパック 計器表示処理（シンプル表示）" alt="" coords="145,80,303,107"/>
+<area shape="rect" href="powerpack_8c.html" title="パワーパック メイン処理" alt="" coords="328,80,445,107"/>
+</map>
+</div>
+</div>
+<p><a href="powerpack_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structpowerpack__t.html">powerpack_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックの状態管理構造体  <a href="structpowerpack__t.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">TRUE/FALSE</div></td></tr>
+<tr class="memitem:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">TRUE</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:aa8cecfc5c5c054d2875c03e77b7be15d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa93f0eb578d23995850d61f7d61c55c1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#aa93f0eb578d23995850d61f7d61c55c1">FALSE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:aa93f0eb578d23995850d61f7d61c55c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">線路制御インタフェース</div></td></tr>
+<tr class="memitem:a8d5bbef82905d6f417fab12370b1d21d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a8d5bbef82905d6f417fab12370b1d21d">POWERPACK_FORWARD_PORT</a>&#160;&#160;&#160;22</td></tr>
+<tr class="separator:a8d5bbef82905d6f417fab12370b1d21d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b9eec05bc35645c173c92ad8c9c8642"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a2b9eec05bc35645c173c92ad8c9c8642">POWERPACK_BACKWARD_PORT</a>&#160;&#160;&#160;23</td></tr>
+<tr class="separator:a2b9eec05bc35645c173c92ad8c9c8642"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf2416f5c9a333bcc1c8d5419e6404aa"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#abf2416f5c9a333bcc1c8d5419e6404aa">POWERPACK_PWM_PORT</a>&#160;&#160;&#160;18</td></tr>
+<tr class="separator:abf2416f5c9a333bcc1c8d5419e6404aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f94690c8f45027a9d86eaa082893ebd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a7f94690c8f45027a9d86eaa082893ebd">POWERPACK_PWM_DIVISOR</a>&#160;&#160;&#160;3</td></tr>
+<tr class="separator:a7f94690c8f45027a9d86eaa082893ebd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2a9157a3dc5ce2f073e139de4103e06"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#af2a9157a3dc5ce2f073e139de4103e06">POWERPACK_PWM_RANGE</a>&#160;&#160;&#160;256</td></tr>
+<tr class="separator:af2a9157a3dc5ce2f073e139de4103e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d34ea27c843ad5ce69e65b675bf1ab4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a3d34ea27c843ad5ce69e65b675bf1ab4">POWERPACK_PWM_MIN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a3d34ea27c843ad5ce69e65b675bf1ab4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae456cac42fa8a6ae244f81839d43832d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#ae456cac42fa8a6ae244f81839d43832d">POWERPACK_PWM_MAX</a>&#160;&#160;&#160;255</td></tr>
+<tr class="separator:ae456cac42fa8a6ae244f81839d43832d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">パワーパックの設定</div></td></tr>
+<tr class="memitem:a5a5b9d6e14a374f09a377a193e6abd3c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a5a5b9d6e14a374f09a377a193e6abd3c">POWERPACK_SPEED_MIN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a5a5b9d6e14a374f09a377a193e6abd3c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f09702abc3ed6ea863c262f2797f4da"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a2f09702abc3ed6ea863c262f2797f4da">POWERPACK_SPEED_MAX</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a2f09702abc3ed6ea863c262f2797f4da"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acd7e119e50d24f6a565194f48ba1528c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#acd7e119e50d24f6a565194f48ba1528c">POWERPACK_SPEED_UP_STEP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:acd7e119e50d24f6a565194f48ba1528c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ed2a784d0823cdca05bae4ea2e6225a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a7ed2a784d0823cdca05bae4ea2e6225a">POWERPACK_SPEED_DOWN_STEP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a7ed2a784d0823cdca05bae4ea2e6225a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6dd3f97efea3016fdc3e60ec48f7672f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a6dd3f97efea3016fdc3e60ec48f7672f">POWERPACK_LIGHT_MIN</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a6dd3f97efea3016fdc3e60ec48f7672f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07ea44fc2ceada80e4e2ec89cf7e67cd"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a07ea44fc2ceada80e4e2ec89cf7e67cd">POWERPACK_LIGHT_MAX</a>&#160;&#160;&#160;100</td></tr>
+<tr class="separator:a07ea44fc2ceada80e4e2ec89cf7e67cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5743db2f6207fe60d8a0cdc1b6ada9f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#af5743db2f6207fe60d8a0cdc1b6ada9f">POWERPACK_LIGHT_UP_STEP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:af5743db2f6207fe60d8a0cdc1b6ada9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3149be887427c3f29d85aa06f8f2f2a1"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a3149be887427c3f29d85aa06f8f2f2a1">POWERPACK_LIGHT_DOWN_STEP</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a3149be887427c3f29d85aa06f8f2f2a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">タイムアウト時間の有効範囲</div></td></tr>
+<tr class="memitem:ab28dec2690305d206980cdfdd4b0c2ac"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#ab28dec2690305d206980cdfdd4b0c2ac">POWERPACK_TIMEOUT_PERIOD_MIN</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:ab28dec2690305d206980cdfdd4b0c2ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249baa72a9e5d766c34c63f014dd410f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a249baa72a9e5d766c34c63f014dd410f">POWERPACK_TIMEOUT_PERIOD_MAX</a>&#160;&#160;&#160;3600</td></tr>
+<tr class="separator:a249baa72a9e5d766c34c63f014dd410f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a258f2a45add598f40951ddc61370fe4e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a258f2a45add598f40951ddc61370fe4e">POWERPACK_TIMEOUT_PERIOD_DEFAULT</a>&#160;&#160;&#160;600</td></tr>
+<tr class="separator:a258f2a45add598f40951ddc61370fe4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:ab8a55f0b2c636b155faa9af3b2be95b4"><td class="memItemLeft" align="right" valign="top"><a id="ab8a55f0b2c636b155faa9af3b2be95b4"></a>
+typedef enum <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">powerpack_operation_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#ab8a55f0b2c636b155faa9af3b2be95b4">POWERPACK_OPERATION_E</a></td></tr>
+<tr class="memdesc:ab8a55f0b2c636b155faa9af3b2be95b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックのユーザ操作コード <br /></td></tr>
+<tr class="separator:ab8a55f0b2c636b155faa9af3b2be95b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a729f8086cc87115b2176fbe890385fcb"><td class="memItemLeft" align="right" valign="top"><a id="a729f8086cc87115b2176fbe890385fcb"></a>
+typedef enum <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">powerpack_reverser_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a729f8086cc87115b2176fbe890385fcb">POWERPACK_REVERSER_E</a></td></tr>
+<tr class="memdesc:a729f8086cc87115b2176fbe890385fcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆転ハンドルのハンドル位置 <br /></td></tr>
+<tr class="separator:a729f8086cc87115b2176fbe890385fcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc44d60af2cb477e12c1fc45ffffbf28"><td class="memItemLeft" align="right" valign="top"><a id="acc44d60af2cb477e12c1fc45ffffbf28"></a>
+typedef struct <a class="el" href="structpowerpack__t.html">powerpack_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a></td></tr>
+<tr class="memdesc:acc44d60af2cb477e12c1fc45ffffbf28"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックの状態管理構造体 <br /></td></tr>
+<tr class="separator:acc44d60af2cb477e12c1fc45ffffbf28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a9f481c290641f707c9c587ac4a08c727"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">powerpack_operation_e</a> { <br />
+&#160;&#160;<a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa">POWERPACK_NO_OPERATION</a> = 0
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82">POWERPACK_EXIT</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523">POWERPACK_REVERSER_FSIDE</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c">POWERPACK_REVERSER_RSIDE</a>
+, <br />
+&#160;&#160;<a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad">POWERPACK_SPEED_UP</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8">POWERPACK_SPEED_DOWN</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652">POWERPACK_LIGHT_UP</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af">POWERPACK_LIGHT_DOWN</a>
+, <br />
+&#160;&#160;<a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c">POWERPACK_BRAKE_E</a>
+, <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a9c66f4e061b3c291cb6cc35c5b83dac6">POWERPACK_OPERATION_E_NUM</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a9f481c290641f707c9c587ac4a08c727"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックのユーザ操作コード  <a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">[詳解]</a><br /></td></tr>
+<tr class="separator:a9f481c290641f707c9c587ac4a08c727"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a5c3090fa381b8ca5e2ccedc593af2a"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">powerpack_reverser_e</a> { <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104">POWERPACK_OFF</a> = 0
+, <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792">POWERPACK_FORWARD</a>
+, <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be">POWERPACK_REVERSE</a>
+, <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aac78dff3cfc4acd27f7488eb2eabbbaf8">POWERPACK_REVERSER_E_NUM</a>
+ }</td></tr>
+<tr class="memdesc:a3a5c3090fa381b8ca5e2ccedc593af2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆転ハンドルのハンドル位置  <a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">[詳解]</a><br /></td></tr>
+<tr class="separator:a3a5c3090fa381b8ca5e2ccedc593af2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>パワーパック 定数定義 </p>
+<dl class="section author"><dt>著者</dt><dd>Keitetsu </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2016/10/02 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2016 Keitetsu </dd></dl>
+<dl class="section user"><dt>License</dt><dd>This software is released under the MIT License. </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="aa93f0eb578d23995850d61f7d61c55c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa93f0eb578d23995850d61f7d61c55c1">&#9670;&nbsp;</a></span>FALSE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define FALSE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>偽 </p>
+
+</div>
+</div>
+<a id="a2b9eec05bc35645c173c92ad8c9c8642"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b9eec05bc35645c173c92ad8c9c8642">&#9670;&nbsp;</a></span>POWERPACK_BACKWARD_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_BACKWARD_PORT&#160;&#160;&#160;23</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>後進信号のGPIOポート番号 </p>
+
+</div>
+</div>
+<a id="a8d5bbef82905d6f417fab12370b1d21d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d5bbef82905d6f417fab12370b1d21d">&#9670;&nbsp;</a></span>POWERPACK_FORWARD_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_FORWARD_PORT&#160;&#160;&#160;22</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>前進信号のGPIOポート番号 </p>
+
+</div>
+</div>
+<a id="a3149be887427c3f29d85aa06f8f2f2a1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3149be887427c3f29d85aa06f8f2f2a1">&#9670;&nbsp;</a></span>POWERPACK_LIGHT_DOWN_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_LIGHT_DOWN_STEP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの常点灯出力下降度 </p>
+
+</div>
+</div>
+<a id="a07ea44fc2ceada80e4e2ec89cf7e67cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07ea44fc2ceada80e4e2ec89cf7e67cd">&#9670;&nbsp;</a></span>POWERPACK_LIGHT_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_LIGHT_MAX&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの最大常点灯出力 </p>
+
+</div>
+</div>
+<a id="a6dd3f97efea3016fdc3e60ec48f7672f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6dd3f97efea3016fdc3e60ec48f7672f">&#9670;&nbsp;</a></span>POWERPACK_LIGHT_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_LIGHT_MIN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの最小常点灯出力 </p>
+
+</div>
+</div>
+<a id="af5743db2f6207fe60d8a0cdc1b6ada9f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af5743db2f6207fe60d8a0cdc1b6ada9f">&#9670;&nbsp;</a></span>POWERPACK_LIGHT_UP_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_LIGHT_UP_STEP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの常点灯出力上昇度 </p>
+
+</div>
+</div>
+<a id="a7f94690c8f45027a9d86eaa082893ebd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f94690c8f45027a9d86eaa082893ebd">&#9670;&nbsp;</a></span>POWERPACK_PWM_DIVISOR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_PWM_DIVISOR&#160;&#160;&#160;3</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PWM制御用タイマの分周比（約25kHz） </p>
+
+</div>
+</div>
+<a id="ae456cac42fa8a6ae244f81839d43832d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae456cac42fa8a6ae244f81839d43832d">&#9670;&nbsp;</a></span>POWERPACK_PWM_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_PWM_MAX&#160;&#160;&#160;255</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最大PWMデューティ </p>
+
+</div>
+</div>
+<a id="a3d34ea27c843ad5ce69e65b675bf1ab4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d34ea27c843ad5ce69e65b675bf1ab4">&#9670;&nbsp;</a></span>POWERPACK_PWM_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_PWM_MIN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最低PWMデューティ </p>
+
+</div>
+</div>
+<a id="abf2416f5c9a333bcc1c8d5419e6404aa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf2416f5c9a333bcc1c8d5419e6404aa">&#9670;&nbsp;</a></span>POWERPACK_PWM_PORT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_PWM_PORT&#160;&#160;&#160;18</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>速度制御信号のPWMポート番号 </p>
+
+</div>
+</div>
+<a id="af2a9157a3dc5ce2f073e139de4103e06"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2a9157a3dc5ce2f073e139de4103e06">&#9670;&nbsp;</a></span>POWERPACK_PWM_RANGE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_PWM_RANGE&#160;&#160;&#160;256</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>PWM制御用タイマの分解能 </p>
+
+</div>
+</div>
+<a id="a7ed2a784d0823cdca05bae4ea2e6225a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7ed2a784d0823cdca05bae4ea2e6225a">&#9670;&nbsp;</a></span>POWERPACK_SPEED_DOWN_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_SPEED_DOWN_STEP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの減速度 </p>
+
+</div>
+</div>
+<a id="a2f09702abc3ed6ea863c262f2797f4da"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f09702abc3ed6ea863c262f2797f4da">&#9670;&nbsp;</a></span>POWERPACK_SPEED_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_SPEED_MAX&#160;&#160;&#160;100</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの最高速度 </p>
+
+</div>
+</div>
+<a id="a5a5b9d6e14a374f09a377a193e6abd3c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a5b9d6e14a374f09a377a193e6abd3c">&#9670;&nbsp;</a></span>POWERPACK_SPEED_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_SPEED_MIN&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの最低速度 </p>
+
+</div>
+</div>
+<a id="acd7e119e50d24f6a565194f48ba1528c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acd7e119e50d24f6a565194f48ba1528c">&#9670;&nbsp;</a></span>POWERPACK_SPEED_UP_STEP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_SPEED_UP_STEP&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>パワーパックの加速度 </p>
+
+</div>
+</div>
+<a id="a258f2a45add598f40951ddc61370fe4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a258f2a45add598f40951ddc61370fe4e">&#9670;&nbsp;</a></span>POWERPACK_TIMEOUT_PERIOD_DEFAULT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_TIMEOUT_PERIOD_DEFAULT&#160;&#160;&#160;600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>既定タイムアウト時間（秒） </p>
+
+</div>
+</div>
+<a id="a249baa72a9e5d766c34c63f014dd410f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a249baa72a9e5d766c34c63f014dd410f">&#9670;&nbsp;</a></span>POWERPACK_TIMEOUT_PERIOD_MAX</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_TIMEOUT_PERIOD_MAX&#160;&#160;&#160;3600</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最長タイムアウト時間（秒） </p>
+
+</div>
+</div>
+<a id="ab28dec2690305d206980cdfdd4b0c2ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab28dec2690305d206980cdfdd4b0c2ac">&#9670;&nbsp;</a></span>POWERPACK_TIMEOUT_PERIOD_MIN</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define POWERPACK_TIMEOUT_PERIOD_MIN&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>最短タイムアウト時間（秒） </p>
+
+</div>
+</div>
+<a id="aa8cecfc5c5c054d2875c03e77b7be15d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8cecfc5c5c054d2875c03e77b7be15d">&#9670;&nbsp;</a></span>TRUE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TRUE&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>真 </p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a9f481c290641f707c9c587ac4a08c727"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f481c290641f707c9c587ac4a08c727">&#9670;&nbsp;</a></span>powerpack_operation_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">powerpack_operation_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パワーパックのユーザ操作コード </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa"></a>POWERPACK_NO_OPERATION&#160;</td><td class="fielddoc"><p>操作なし </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82"></a>POWERPACK_EXIT&#160;</td><td class="fielddoc"><p>パワーパックの終了 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523"></a>POWERPACK_REVERSER_FSIDE&#160;</td><td class="fielddoc"><p>逆転ハンドル 前側 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c"></a>POWERPACK_REVERSER_RSIDE&#160;</td><td class="fielddoc"><p>逆転ハンドル 後側 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad"></a>POWERPACK_SPEED_UP&#160;</td><td class="fielddoc"><p>加速 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8"></a>POWERPACK_SPEED_DOWN&#160;</td><td class="fielddoc"><p>減速 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652"></a>POWERPACK_LIGHT_UP&#160;</td><td class="fielddoc"><p>常点灯出力増 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af"></a>POWERPACK_LIGHT_DOWN&#160;</td><td class="fielddoc"><p>常点灯出力減 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c"></a>POWERPACK_BRAKE_E&#160;</td><td class="fielddoc"><p>非常制動 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a9f481c290641f707c9c587ac4a08c727a9c66f4e061b3c291cb6cc35c5b83dac6"></a>POWERPACK_OPERATION_E_NUM&#160;</td><td class="fielddoc"><p>POWERPACK_OPERATION_E_NUMの列挙数 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a3a5c3090fa381b8ca5e2ccedc593af2a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3a5c3090fa381b8ca5e2ccedc593af2a">&#9670;&nbsp;</a></span>powerpack_reverser_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">powerpack_reverser_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆転ハンドルのハンドル位置 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104"></a>POWERPACK_OFF&#160;</td><td class="fielddoc"><p>切 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792"></a>POWERPACK_FORWARD&#160;</td><td class="fielddoc"><p>前 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be"></a>POWERPACK_REVERSE&#160;</td><td class="fielddoc"><p>後 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a3a5c3090fa381b8ca5e2ccedc593af2aac78dff3cfc4acd27f7488eb2eabbbaf8"></a>POWERPACK_REVERSER_E_NUM&#160;</td><td class="fielddoc"><p>POWERPACK_REVERSER_Eの列挙数 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="powerpack_8h.html">powerpack.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

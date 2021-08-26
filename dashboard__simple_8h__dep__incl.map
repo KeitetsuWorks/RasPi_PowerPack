@@ -1,0 +1,5 @@
+<map id="include/dashboard_simple.h" name="include/dashboard_simple.h">
+<area shape="rect" id="node1" title="パワーパック 計器表示処理（シンプル表示）" alt="" coords="75,5,257,32"/>
+<area shape="rect" id="node2" href="$dashboard__simple_8c.html" title="パワーパック 計器表示処理（シンプル表示）" alt="" coords="5,80,164,107"/>
+<area shape="rect" id="node3" href="$powerpack_8c.html" title="パワーパック メイン処理" alt="" coords="189,80,306,107"/>
+</map>

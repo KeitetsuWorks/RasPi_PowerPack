@@ -1,0 +1,12 @@
+<map id="initDashboard" name="initDashboard">
+<area shape="rect" id="node1" title="パワーパック 計器表示の初期化" alt="" coords="5,157,107,184"/>
+<area shape="rect" id="node2" href="$dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01" title="常点灯出力調整ボリューム 針の表示" alt="" coords="155,56,333,83"/>
+<area shape="rect" id="node4" href="$dashboard_8c.html#a65292f04e8b0dec16dba369820b257ed" title="常点灯出力調整ボリューム 目盛の表示" alt="" coords="159,259,329,285"/>
+<area shape="rect" id="node6" href="$dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d" title="パワーパックの状態 テキスト表示" alt="" coords="168,107,320,133"/>
+<area shape="rect" id="node7" href="$dashboard_8c.html#ac070a83e1fb4b8059a1992e8000260f8" title="逆転ハンドル 目盛の表示" alt="" coords="195,157,293,184"/>
+<area shape="rect" id="node8" href="$dashboard_8c.html#a738816bc8bce5d71697334434bc156cd" title="逆転ハンドル 位置の表示" alt="" coords="171,208,317,235"/>
+<area shape="rect" id="node9" href="$dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a" title="速度調整ボリューム 針の表示" alt="" coords="161,5,327,32"/>
+<area shape="rect" id="node10" href="$dashboard_8c.html#a717cf256220f688c9efc8c06b628fc44" title="速度調整ボリューム 目盛の表示" alt="" coords="165,309,323,336"/>
+<area shape="rect" id="node3" href="$meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="381,31,524,57"/>
+<area shape="rect" id="node5" href="$meter_8h.html#a9ef3ea9c12d206f8cac049dc6a10dd77" title="百分率メーター 目盛の表示" alt="" coords="385,284,520,311"/>
+</map>

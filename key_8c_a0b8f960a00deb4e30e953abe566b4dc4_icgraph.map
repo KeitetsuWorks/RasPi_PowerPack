@@ -1,0 +1,5 @@
+<map id="openKey" name="openKey">
+<area shape="rect" id="node1" title="キー入力設定の初期化" alt="" coords="351,5,423,32"/>
+<area shape="rect" id="node2" href="$powerpack_8c.html#a96a7897734c08e9850b47f20b6abec37" title="ユーザ操作の開始処理" alt="" coords="104,5,303,32"/>
+<area shape="rect" id="node3" href="$powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>

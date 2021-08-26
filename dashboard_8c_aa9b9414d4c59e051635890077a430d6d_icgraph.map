@@ -1,0 +1,6 @@
+<map id="printPowerPackStatus" name="printPowerPackStatus">
+<area shape="rect" id="node1" title="パワーパックの状態 テキスト表示" alt="" coords="331,31,483,57"/>
+<area shape="rect" id="node2" href="$dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="143,5,244,32"/>
+<area shape="rect" id="node4" href="$dashboard_8h.html#af57b59fdefbd0c81eaad2ca1d449ca0b" title="パワーパックの状態 テキスト表示更新" alt="" coords="104,56,283,83"/>
+<area shape="rect" id="node3" href="$powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,31,56,57"/>
+</map>

@@ -1,0 +1,597 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Model Railway Power Pack using Raspberry Pi: src/dashboard.c ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Model Railway Power Pack using Raspberry Pi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('dashboard_8c.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">dashboard.c ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>パワーパック 計器表示処理  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="powerpack_8h_source.html">powerpack.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="meter_8h_source.html">meter.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="dashboard_8h_source.html">dashboard.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+dashboard.c の依存先関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c__incl.png" border="0" usemap="#asrc_2dashboard_8c" alt=""/></div>
+<map name="asrc_2dashboard_8c" id="asrc_2dashboard_8c">
+<area shape="rect" title="パワーパック 計器表示処理" alt="" coords="131,5,246,32"/>
+<area shape="rect" title=" " alt="" coords="5,80,65,107"/>
+<area shape="rect" href="powerpack_8h.html" title="パワーパック 定数定義" alt="" coords="89,80,184,107"/>
+<area shape="rect" href="meter_8h.html" title="メーター表示処理" alt="" coords="208,80,273,107"/>
+<area shape="rect" href="dashboard_8h.html" title="パワーパック 計器表示処理" alt="" coords="297,80,389,107"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ac070a83e1fb4b8059a1992e8000260f8"><td class="memItemLeft" align="right" valign="top"><a id="ac070a83e1fb4b8059a1992e8000260f8"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#ac070a83e1fb4b8059a1992e8000260f8">printReverser</a> (void)</td></tr>
+<tr class="memdesc:ac070a83e1fb4b8059a1992e8000260f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆転ハンドル 目盛の表示 <br /></td></tr>
+<tr class="separator:ac070a83e1fb4b8059a1992e8000260f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a738816bc8bce5d71697334434bc156cd"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a738816bc8bce5d71697334434bc156cd">printReverserPosition</a> (int reverser)</td></tr>
+<tr class="memdesc:a738816bc8bce5d71697334434bc156cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆転ハンドル 位置の表示  <a href="dashboard_8c.html#a738816bc8bce5d71697334434bc156cd">[詳解]</a><br /></td></tr>
+<tr class="separator:a738816bc8bce5d71697334434bc156cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65292f04e8b0dec16dba369820b257ed"><td class="memItemLeft" align="right" valign="top"><a id="a65292f04e8b0dec16dba369820b257ed"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a65292f04e8b0dec16dba369820b257ed">printLightingVolumeScale</a> (void)</td></tr>
+<tr class="memdesc:a65292f04e8b0dec16dba369820b257ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">常点灯出力調整ボリューム 目盛の表示 <br /></td></tr>
+<tr class="separator:a65292f04e8b0dec16dba369820b257ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834cd51d5948b46ce1946c4ad113fe01"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01">printLightingVolumeNeedle</a> (int light)</td></tr>
+<tr class="memdesc:a834cd51d5948b46ce1946c4ad113fe01"><td class="mdescLeft">&#160;</td><td class="mdescRight">常点灯出力調整ボリューム 針の表示  <a href="dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01">[詳解]</a><br /></td></tr>
+<tr class="separator:a834cd51d5948b46ce1946c4ad113fe01"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a717cf256220f688c9efc8c06b628fc44"><td class="memItemLeft" align="right" valign="top"><a id="a717cf256220f688c9efc8c06b628fc44"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a717cf256220f688c9efc8c06b628fc44">printSpeedometerScale</a> (void)</td></tr>
+<tr class="memdesc:a717cf256220f688c9efc8c06b628fc44"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度調整ボリューム 目盛の表示 <br /></td></tr>
+<tr class="separator:a717cf256220f688c9efc8c06b628fc44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ef3584cbfc1d19b3867b20d707a815a"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a">printSpeedometerNeedle</a> (int speed)</td></tr>
+<tr class="memdesc:a8ef3584cbfc1d19b3867b20d707a815a"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度調整ボリューム 針の表示  <a href="dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a">[詳解]</a><br /></td></tr>
+<tr class="separator:a8ef3584cbfc1d19b3867b20d707a815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9b9414d4c59e051635890077a430d6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d">printPowerPackStatus</a> (<a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a> powerpack)</td></tr>
+<tr class="memdesc:aa9b9414d4c59e051635890077a430d6d"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックの状態 テキスト表示  <a href="dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d">[詳解]</a><br /></td></tr>
+<tr class="separator:aa9b9414d4c59e051635890077a430d6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a746c8ef6d09ccc38caecfa444fc35757"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a746c8ef6d09ccc38caecfa444fc35757">initDashboard</a> (<a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a> powerpack)</td></tr>
+<tr class="memdesc:a746c8ef6d09ccc38caecfa444fc35757"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパック 計器表示の初期化  <a href="dashboard_8c.html#a746c8ef6d09ccc38caecfa444fc35757">[詳解]</a><br /></td></tr>
+<tr class="separator:a746c8ef6d09ccc38caecfa444fc35757"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a952a63ce658c8d861eb7857d9a90df61"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a952a63ce658c8d861eb7857d9a90df61">redisplayReverserPosition</a> (int reverser)</td></tr>
+<tr class="memdesc:a952a63ce658c8d861eb7857d9a90df61"><td class="mdescLeft">&#160;</td><td class="mdescRight">逆転ハンドル 位置の表示更新  <a href="dashboard_8c.html#a952a63ce658c8d861eb7857d9a90df61">[詳解]</a><br /></td></tr>
+<tr class="separator:a952a63ce658c8d861eb7857d9a90df61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c0e2eb8420971981e911cb5a097c71"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#a18c0e2eb8420971981e911cb5a097c71">redisplayLightingVolumeNeedle</a> (int light)</td></tr>
+<tr class="memdesc:a18c0e2eb8420971981e911cb5a097c71"><td class="mdescLeft">&#160;</td><td class="mdescRight">常点灯出力調整ボリューム 針の表示更新  <a href="dashboard_8c.html#a18c0e2eb8420971981e911cb5a097c71">[詳解]</a><br /></td></tr>
+<tr class="separator:a18c0e2eb8420971981e911cb5a097c71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aca1eb779fdf62e8845658be9aab3240d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#aca1eb779fdf62e8845658be9aab3240d">redisplaySpeedometerNeedle</a> (int speed)</td></tr>
+<tr class="memdesc:aca1eb779fdf62e8845658be9aab3240d"><td class="mdescLeft">&#160;</td><td class="mdescRight">速度調整ボリューム 針の表示更新  <a href="dashboard_8c.html#aca1eb779fdf62e8845658be9aab3240d">[詳解]</a><br /></td></tr>
+<tr class="separator:aca1eb779fdf62e8845658be9aab3240d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af57b59fdefbd0c81eaad2ca1d449ca0b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="dashboard_8c.html#af57b59fdefbd0c81eaad2ca1d449ca0b">redisplayPowerPackStatus</a> (<a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a> powerpack)</td></tr>
+<tr class="memdesc:af57b59fdefbd0c81eaad2ca1d449ca0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">パワーパックの状態 テキスト表示更新  <a href="dashboard_8c.html#af57b59fdefbd0c81eaad2ca1d449ca0b">[詳解]</a><br /></td></tr>
+<tr class="separator:af57b59fdefbd0c81eaad2ca1d449ca0b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>パワーパック 計器表示処理 </p>
+<dl class="section author"><dt>著者</dt><dd>Keitetsu </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2016/11/03 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2016 Keitetsu </dd></dl>
+<dl class="section user"><dt>License</dt><dd>This software is released under the MIT License. </dd></dl>
+</div><h2 class="groupheader">関数詳解</h2>
+<a id="a746c8ef6d09ccc38caecfa444fc35757"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a746c8ef6d09ccc38caecfa444fc35757">&#9670;&nbsp;</a></span>initDashboard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void initDashboard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a>&#160;</td>
+          <td class="paramname"><em>powerpack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パワーパック 計器表示の初期化 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">powerpack</td><td>パワーパックの状態管理構造体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_cgraph.png" border="0" usemap="#adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_cgraph" alt=""/></div>
+<map name="adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_cgraph" id="adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_cgraph">
+<area shape="rect" title="パワーパック 計器表示の初期化" alt="" coords="5,157,107,184"/>
+<area shape="rect" href="dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01" title="常点灯出力調整ボリューム 針の表示" alt="" coords="155,56,333,83"/>
+<area shape="rect" href="dashboard_8c.html#a65292f04e8b0dec16dba369820b257ed" title="常点灯出力調整ボリューム 目盛の表示" alt="" coords="159,259,329,285"/>
+<area shape="rect" href="dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d" title="パワーパックの状態 テキスト表示" alt="" coords="168,107,320,133"/>
+<area shape="rect" href="dashboard_8c.html#ac070a83e1fb4b8059a1992e8000260f8" title="逆転ハンドル 目盛の表示" alt="" coords="195,157,293,184"/>
+<area shape="rect" href="dashboard_8c.html#a738816bc8bce5d71697334434bc156cd" title="逆転ハンドル 位置の表示" alt="" coords="171,208,317,235"/>
+<area shape="rect" href="dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a" title="速度調整ボリューム 針の表示" alt="" coords="161,5,327,32"/>
+<area shape="rect" href="dashboard_8c.html#a717cf256220f688c9efc8c06b628fc44" title="速度調整ボリューム 目盛の表示" alt="" coords="165,309,323,336"/>
+<area shape="rect" href="meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="381,31,524,57"/>
+<area shape="rect" href="meter_8h.html#a9ef3ea9c12d206f8cac049dc6a10dd77" title="百分率メーター 目盛の表示" alt="" coords="385,284,520,311"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_icgraph.png" border="0" usemap="#adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_icgraph" alt=""/></div>
+<map name="adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_icgraph" id="adashboard_8c_a746c8ef6d09ccc38caecfa444fc35757_icgraph">
+<area shape="rect" title="パワーパック 計器表示の初期化" alt="" coords="104,5,205,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a834cd51d5948b46ce1946c4ad113fe01"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a834cd51d5948b46ce1946c4ad113fe01">&#9670;&nbsp;</a></span>printLightingVolumeNeedle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printLightingVolumeNeedle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>常点灯出力調整ボリューム 針の表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">light</td><td>常点灯出力指示値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_cgraph.png" border="0" usemap="#adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_cgraph" alt=""/></div>
+<map name="adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_cgraph" id="adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_cgraph">
+<area shape="rect" title="常点灯出力調整ボリューム 針の表示" alt="" coords="5,5,184,32"/>
+<area shape="rect" href="meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="232,5,375,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_icgraph.png" border="0" usemap="#adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_icgraph" alt=""/></div>
+<map name="adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_icgraph" id="adashboard_8c_a834cd51d5948b46ce1946c4ad113fe01_icgraph">
+<area shape="rect" title="常点灯出力調整ボリューム 針の表示" alt="" coords="356,31,535,57"/>
+<area shape="rect" href="dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="155,5,257,32"/>
+<area shape="rect" href="dashboard_8h.html#a18c0e2eb8420971981e911cb5a097c71" title="常点灯出力調整ボリューム 針の表示更新" alt="" coords="104,56,308,83"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,31,56,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aa9b9414d4c59e051635890077a430d6d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa9b9414d4c59e051635890077a430d6d">&#9670;&nbsp;</a></span>printPowerPackStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printPowerPackStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a>&#160;</td>
+          <td class="paramname"><em>powerpack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>パワーパックの状態 テキスト表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">powerpack</td><td>パワーパックの状態管理構造体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_aa9b9414d4c59e051635890077a430d6d_icgraph.png" border="0" usemap="#adashboard_8c_aa9b9414d4c59e051635890077a430d6d_icgraph" alt=""/></div>
+<map name="adashboard_8c_aa9b9414d4c59e051635890077a430d6d_icgraph" id="adashboard_8c_aa9b9414d4c59e051635890077a430d6d_icgraph">
+<area shape="rect" title="パワーパックの状態 テキスト表示" alt="" coords="331,31,483,57"/>
+<area shape="rect" href="dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="143,5,244,32"/>
+<area shape="rect" href="dashboard_8h.html#af57b59fdefbd0c81eaad2ca1d449ca0b" title="パワーパックの状態 テキスト表示更新" alt="" coords="104,56,283,83"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,31,56,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a738816bc8bce5d71697334434bc156cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a738816bc8bce5d71697334434bc156cd">&#9670;&nbsp;</a></span>printReverserPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printReverserPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>逆転ハンドル 位置の表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reverser</td><td>逆転ハンドルのハンドル位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a738816bc8bce5d71697334434bc156cd_icgraph.png" border="0" usemap="#adashboard_8c_a738816bc8bce5d71697334434bc156cd_icgraph" alt=""/></div>
+<map name="adashboard_8c_a738816bc8bce5d71697334434bc156cd_icgraph" id="adashboard_8c_a738816bc8bce5d71697334434bc156cd_icgraph">
+<area shape="rect" title="逆転ハンドル 位置の表示" alt="" coords="324,31,471,57"/>
+<area shape="rect" href="dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="139,5,241,32"/>
+<area shape="rect" href="dashboard_8h.html#a952a63ce658c8d861eb7857d9a90df61" title="逆転ハンドル 位置の表示更新" alt="" coords="104,56,276,83"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,31,56,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a8ef3584cbfc1d19b3867b20d707a815a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8ef3584cbfc1d19b3867b20d707a815a">&#9670;&nbsp;</a></span>printSpeedometerNeedle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void printSpeedometerNeedle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>速度調整ボリューム 針の表示 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>速度指示値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_cgraph.png" border="0" usemap="#adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_cgraph" alt=""/></div>
+<map name="adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_cgraph" id="adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_cgraph">
+<area shape="rect" title="速度調整ボリューム 針の表示" alt="" coords="5,5,171,32"/>
+<area shape="rect" href="meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="219,5,361,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_icgraph.png" border="0" usemap="#adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_icgraph" alt=""/></div>
+<map name="adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_icgraph" id="adashboard_8c_a8ef3584cbfc1d19b3867b20d707a815a_icgraph">
+<area shape="rect" title="速度調整ボリューム 針の表示" alt="" coords="343,31,508,57"/>
+<area shape="rect" href="dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="149,5,250,32"/>
+<area shape="rect" href="dashboard_8h.html#aca1eb779fdf62e8845658be9aab3240d" title="速度調整ボリューム 針の表示更新" alt="" coords="104,56,295,83"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,31,56,57"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a18c0e2eb8420971981e911cb5a097c71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c0e2eb8420971981e911cb5a097c71">&#9670;&nbsp;</a></span>redisplayLightingVolumeNeedle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void redisplayLightingVolumeNeedle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>light</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>常点灯出力調整ボリューム 針の表示更新 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">light</td><td>常点灯出力指示値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a18c0e2eb8420971981e911cb5a097c71_cgraph.png" border="0" usemap="#adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_cgraph" alt=""/></div>
+<map name="adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_cgraph" id="adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_cgraph">
+<area shape="rect" title="常点灯出力調整ボリューム 針の表示更新" alt="" coords="5,5,209,32"/>
+<area shape="rect" href="dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01" title="常点灯出力調整ボリューム 針の表示" alt="" coords="257,5,436,32"/>
+<area shape="rect" href="meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="484,5,627,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a18c0e2eb8420971981e911cb5a097c71_icgraph.png" border="0" usemap="#adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_icgraph" alt=""/></div>
+<map name="adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_icgraph" id="adashboard_8c_a18c0e2eb8420971981e911cb5a097c71_icgraph">
+<area shape="rect" title="常点灯出力調整ボリューム 針の表示更新" alt="" coords="104,5,308,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="af57b59fdefbd0c81eaad2ca1d449ca0b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af57b59fdefbd0c81eaad2ca1d449ca0b">&#9670;&nbsp;</a></span>redisplayPowerPackStatus()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void redisplayPowerPackStatus </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a>&#160;</td>
+          <td class="paramname"><em>powerpack</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>パワーパックの状態 テキスト表示更新 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">powerpack</td><td>パワーパックの状態管理構造体 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_cgraph.png" border="0" usemap="#adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_cgraph" alt=""/></div>
+<map name="adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_cgraph" id="adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_cgraph">
+<area shape="rect" title="パワーパックの状態 テキスト表示更新" alt="" coords="5,5,184,32"/>
+<area shape="rect" href="dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d" title="パワーパックの状態 テキスト表示" alt="" coords="232,5,384,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_icgraph.png" border="0" usemap="#adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_icgraph" alt=""/></div>
+<map name="adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_icgraph" id="adashboard_8c_af57b59fdefbd0c81eaad2ca1d449ca0b_icgraph">
+<area shape="rect" title="パワーパックの状態 テキスト表示更新" alt="" coords="104,5,283,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a952a63ce658c8d861eb7857d9a90df61"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a952a63ce658c8d861eb7857d9a90df61">&#9670;&nbsp;</a></span>redisplayReverserPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void redisplayReverserPosition </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>reverser</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>逆転ハンドル 位置の表示更新 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">reverser</td><td>逆転ハンドルのハンドル位置 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a952a63ce658c8d861eb7857d9a90df61_cgraph.png" border="0" usemap="#adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_cgraph" alt=""/></div>
+<map name="adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_cgraph" id="adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_cgraph">
+<area shape="rect" title="逆転ハンドル 位置の表示更新" alt="" coords="5,5,177,32"/>
+<area shape="rect" href="dashboard_8c.html#a738816bc8bce5d71697334434bc156cd" title="逆転ハンドル 位置の表示" alt="" coords="225,5,372,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_a952a63ce658c8d861eb7857d9a90df61_icgraph.png" border="0" usemap="#adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_icgraph" alt=""/></div>
+<map name="adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_icgraph" id="adashboard_8c_a952a63ce658c8d861eb7857d9a90df61_icgraph">
+<area shape="rect" title="逆転ハンドル 位置の表示更新" alt="" coords="104,5,276,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="aca1eb779fdf62e8845658be9aab3240d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aca1eb779fdf62e8845658be9aab3240d">&#9670;&nbsp;</a></span>redisplaySpeedometerNeedle()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void redisplaySpeedometerNeedle </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>speed</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>速度調整ボリューム 針の表示更新 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">speed</td><td>速度指示値 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_aca1eb779fdf62e8845658be9aab3240d_cgraph.png" border="0" usemap="#adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_cgraph" alt=""/></div>
+<map name="adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_cgraph" id="adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_cgraph">
+<area shape="rect" title="速度調整ボリューム 針の表示更新" alt="" coords="5,5,196,32"/>
+<area shape="rect" href="dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a" title="速度調整ボリューム 針の表示" alt="" coords="244,5,409,32"/>
+<area shape="rect" href="meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="457,5,600,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="dashboard_8c_aca1eb779fdf62e8845658be9aab3240d_icgraph.png" border="0" usemap="#adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_icgraph" alt=""/></div>
+<map name="adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_icgraph" id="adashboard_8c_aca1eb779fdf62e8845658be9aab3240d_icgraph">
+<area shape="rect" title="速度調整ボリューム 針の表示更新" alt="" coords="104,5,295,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="dashboard_8c.html">dashboard.c</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

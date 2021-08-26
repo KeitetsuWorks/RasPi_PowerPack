@@ -1,0 +1,489 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Model Railway Power Pack using Raspberry Pi: RasPi_Rail/include/RasPi_Rail.h ファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Model Railway Power Pack using Raspberry Pi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_ras_pi___rail_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">データ構造</a> &#124;
+<a href="#typedef-members">型定義</a> &#124;
+<a href="#enum-members">列挙型</a> &#124;
+<a href="#func-members">関数</a>  </div>
+  <div class="headertitle">
+<div class="title">RasPi_Rail.h ファイル</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Raspberry PiのGPIO/PWMによる鉄道模型制御  
+<a href="#details">[詳解]</a></p>
+<div class="textblock"><div class="dynheader">
+被依存関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ras_pi___rail_8h__dep__incl.png" border="0" usemap="#a_ras_pi___rail_2include_2_ras_pi___rail_8hdep" alt=""/></div>
+<map name="a_ras_pi___rail_2include_2_ras_pi___rail_8hdep" id="a_ras_pi___rail_2include_2_ras_pi___rail_8hdep">
+<area shape="rect" title="Raspberry PiのGPIO/PWMによる鉄道模型制御" alt="" coords="184,5,315,47"/>
+<area shape="rect" href="_ras_pi__ctrl_rail_io_8c.html" title="Raspberry PiのGPIO/PWMによる鉄道模型制御 進行方向/出力制御" alt="" coords="5,95,152,136"/>
+<area shape="rect" href="_ras_pi___rail_io_8c.html" title="Raspberry PiのGPIO/PWMによる鉄道模型制御 線路制御インタフェース設定" alt="" coords="176,95,323,136"/>
+<area shape="rect" href="powerpack_8c.html" title="パワーパック メイン処理" alt="" coords="347,102,464,129"/>
+</map>
+</div>
+</div>
+<p><a href="_ras_pi___rail_8h_source.html">[ソースコード]</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+データ構造</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrail__gpio__t.html">rail_gpio_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIOポートの情報  <a href="structrail__gpio__t.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrail__pwm__t.html">rail_pwm_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWMポートの情報  <a href="structrail__pwm__t.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structrail__io__t.html">rail_io_t</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路制御インタフェース情報  <a href="structrail__io__t.html#details">[詳解]</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+マクロ定義</h2></td></tr>
+<tr><td colspan="2"><div class="groupHeader">関数戻り値</div></td></tr>
+<tr class="memitem:a555f5256b6249c98e26f6fd8fb09c270"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a555f5256b6249c98e26f6fd8fb09c270">RAIL_SUCCESS</a>&#160;&#160;&#160;0x00000000</td></tr>
+<tr class="separator:a555f5256b6249c98e26f6fd8fb09c270"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad61a26374bf2f854194c187a785fe924"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#ad61a26374bf2f854194c187a785fe924">RAIL_FAILURE</a>&#160;&#160;&#160;0x00000001</td></tr>
+<tr class="separator:ad61a26374bf2f854194c187a785fe924"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">エラー情報マスク</div></td></tr>
+<tr class="memitem:a8380207eb2b4b9ae72fddbb18c5c39d7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a8380207eb2b4b9ae72fddbb18c5c39d7">RAIL_INVALID_DIRECTION</a>&#160;&#160;&#160;0x00000002</td></tr>
+<tr class="separator:a8380207eb2b4b9ae72fddbb18c5c39d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7879c138db4b2dcf15d5572337eaf6f2"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a7879c138db4b2dcf15d5572337eaf6f2">RAIL_INVALID_PWM_DUTY</a>&#160;&#160;&#160;0x00000004</td></tr>
+<tr class="separator:a7879c138db4b2dcf15d5572337eaf6f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">GPIOポートの論理</div></td></tr>
+<tr class="memitem:a088e681cae6659dfd317afdf4d61e302"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a088e681cae6659dfd317afdf4d61e302">GPIO_LOW</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a088e681cae6659dfd317afdf4d61e302"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72520b0ab0d18377eb6a481029d0b01e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a72520b0ab0d18377eb6a481029d0b01e">GPIO_HIGH</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:a72520b0ab0d18377eb6a481029d0b01e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr><td colspan="2"><div class="groupHeader">線路電源</div></td></tr>
+<tr class="memitem:a8bcfa0f39bf711dbaa70599899e0f10a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a8bcfa0f39bf711dbaa70599899e0f10a">RAIL_POWER_OFF</a>&#160;&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a088e681cae6659dfd317afdf4d61e302">GPIO_LOW</a></td></tr>
+<tr class="separator:a8bcfa0f39bf711dbaa70599899e0f10a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5ac68b227b0116fdbec845051df242c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a5ac68b227b0116fdbec845051df242c7">RAIL_POWER_ON</a>&#160;&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a72520b0ab0d18377eb6a481029d0b01e">GPIO_HIGH</a></td></tr>
+<tr class="separator:a5ac68b227b0116fdbec845051df242c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+型定義</h2></td></tr>
+<tr class="memitem:afb7e66b98c7b3cf55d6ed467767454ce"><td class="memItemLeft" align="right" valign="top"><a id="afb7e66b98c7b3cf55d6ed467767454ce"></a>
+typedef enum <a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">rail_direction_e</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#afb7e66b98c7b3cf55d6ed467767454ce">RAIL_DIRECTION_E</a></td></tr>
+<tr class="memdesc:afb7e66b98c7b3cf55d6ed467767454ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路上の列車の進行方向 <br /></td></tr>
+<tr class="separator:afb7e66b98c7b3cf55d6ed467767454ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a00c07f6d473a95275de9e5a74a188c09"><td class="memItemLeft" align="right" valign="top"><a id="a00c07f6d473a95275de9e5a74a188c09"></a>
+typedef struct <a class="el" href="structrail__gpio__t.html">rail_gpio_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a00c07f6d473a95275de9e5a74a188c09">RAIL_GPIO_T</a></td></tr>
+<tr class="memdesc:a00c07f6d473a95275de9e5a74a188c09"><td class="mdescLeft">&#160;</td><td class="mdescRight">GPIOポートの情報 <br /></td></tr>
+<tr class="separator:a00c07f6d473a95275de9e5a74a188c09"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae7d768ef945a9d91742df853d92da27a"><td class="memItemLeft" align="right" valign="top"><a id="ae7d768ef945a9d91742df853d92da27a"></a>
+typedef struct <a class="el" href="structrail__pwm__t.html">rail_pwm_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#ae7d768ef945a9d91742df853d92da27a">RAIL_PWM_T</a></td></tr>
+<tr class="memdesc:ae7d768ef945a9d91742df853d92da27a"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWMポートの情報 <br /></td></tr>
+<tr class="separator:ae7d768ef945a9d91742df853d92da27a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c7cacffa33c9ce96ae3fdd841b68bbb"><td class="memItemLeft" align="right" valign="top"><a id="a5c7cacffa33c9ce96ae3fdd841b68bbb"></a>
+typedef struct <a class="el" href="structrail__io__t.html">rail_io_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a></td></tr>
+<tr class="memdesc:a5c7cacffa33c9ce96ae3fdd841b68bbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路制御インタフェース情報 <br /></td></tr>
+<tr class="separator:a5c7cacffa33c9ce96ae3fdd841b68bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
+列挙型</h2></td></tr>
+<tr class="memitem:a35faa54a84e8414ec2c6dfa86d83d381"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">rail_direction_e</a> { <br />
+&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812">RAIL_STOP</a> = 0
+, <a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0">RAIL_FORWARD</a>
+, <a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c">RAIL_BACKWARD</a>
+, <a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5">RAIL_BRAKE</a>
+, <br />
+&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381af7ffc4e718cba76055119dfa0e5974a3">RAIL_DIRECTION_E_NUM</a>
+<br />
+ }</td></tr>
+<tr class="memdesc:a35faa54a84e8414ec2c6dfa86d83d381"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路上の列車の進行方向  <a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">[詳解]</a><br /></td></tr>
+<tr class="separator:a35faa54a84e8414ec2c6dfa86d83d381"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+関数</h2></td></tr>
+<tr class="memitem:ab2ad8cf046b6b04df58843146fb4aea1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#ab2ad8cf046b6b04df58843146fb4aea1">RasPi_initRailIo</a> (void)</td></tr>
+<tr class="memdesc:ab2ad8cf046b6b04df58843146fb4aea1"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路制御インタフェースの初期化  <a href="_ras_pi___rail_8h.html#ab2ad8cf046b6b04df58843146fb4aea1">[詳解]</a><br /></td></tr>
+<tr class="separator:ab2ad8cf046b6b04df58843146fb4aea1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65d3482c0d628a89eb23dc9c3500d539"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a65d3482c0d628a89eb23dc9c3500d539">RasPi_configRailIo</a> (<a class="el" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a> target)</td></tr>
+<tr class="memdesc:a65d3482c0d628a89eb23dc9c3500d539"><td class="mdescLeft">&#160;</td><td class="mdescRight">線路制御インタフェースの設定  <a href="_ras_pi___rail_8h.html#a65d3482c0d628a89eb23dc9c3500d539">[詳解]</a><br /></td></tr>
+<tr class="separator:a65d3482c0d628a89eb23dc9c3500d539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35426b6a74e4d4d4bef464626b1a98bb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="_ras_pi___rail_8h.html#a35426b6a74e4d4d4bef464626b1a98bb">RasPi_ctrlRailIo</a> (<a class="el" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a> target, int direciton_req, int pwm_duty_req)</td></tr>
+<tr class="memdesc:a35426b6a74e4d4d4bef464626b1a98bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">進行方向/出力制御関数  <a href="_ras_pi___rail_8h.html#a35426b6a74e4d4d4bef464626b1a98bb">[詳解]</a><br /></td></tr>
+<tr class="separator:a35426b6a74e4d4d4bef464626b1a98bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">詳解</h2>
+<div class="textblock"><p>Raspberry PiのGPIO/PWMによる鉄道模型制御 </p>
+<dl class="section author"><dt>著者</dt><dd>Keitetsu </dd></dl>
+<dl class="section date"><dt>日付</dt><dd>2016/10/02 </dd></dl>
+<dl class="section copyright"><dt>著作権所有</dt><dd>Copyright (c) 2016 Keitetsu </dd></dl>
+<dl class="section user"><dt>License</dt><dd>This software is released under the MIT License. </dd></dl>
+</div><h2 class="groupheader">マクロ定義詳解</h2>
+<a id="a72520b0ab0d18377eb6a481029d0b01e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a72520b0ab0d18377eb6a481029d0b01e">&#9670;&nbsp;</a></span>GPIO_HIGH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPIO_HIGH&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>High </p>
+
+</div>
+</div>
+<a id="a088e681cae6659dfd317afdf4d61e302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a088e681cae6659dfd317afdf4d61e302">&#9670;&nbsp;</a></span>GPIO_LOW</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define GPIO_LOW&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Low </p>
+
+</div>
+</div>
+<a id="ad61a26374bf2f854194c187a785fe924"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad61a26374bf2f854194c187a785fe924">&#9670;&nbsp;</a></span>RAIL_FAILURE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_FAILURE&#160;&#160;&#160;0x00000001</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>異常終了 </p>
+
+</div>
+</div>
+<a id="a8380207eb2b4b9ae72fddbb18c5c39d7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8380207eb2b4b9ae72fddbb18c5c39d7">&#9670;&nbsp;</a></span>RAIL_INVALID_DIRECTION</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_INVALID_DIRECTION&#160;&#160;&#160;0x00000002</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>無効な進行方向 </p>
+
+</div>
+</div>
+<a id="a7879c138db4b2dcf15d5572337eaf6f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7879c138db4b2dcf15d5572337eaf6f2">&#9670;&nbsp;</a></span>RAIL_INVALID_PWM_DUTY</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_INVALID_PWM_DUTY&#160;&#160;&#160;0x00000004</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>無効なPWMデューティ </p>
+
+</div>
+</div>
+<a id="a8bcfa0f39bf711dbaa70599899e0f10a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8bcfa0f39bf711dbaa70599899e0f10a">&#9670;&nbsp;</a></span>RAIL_POWER_OFF</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_POWER_OFF&#160;&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a088e681cae6659dfd317afdf4d61e302">GPIO_LOW</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>線路電源OFF </p>
+
+</div>
+</div>
+<a id="a5ac68b227b0116fdbec845051df242c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ac68b227b0116fdbec845051df242c7">&#9670;&nbsp;</a></span>RAIL_POWER_ON</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_POWER_ON&#160;&#160;&#160;<a class="el" href="_ras_pi___rail_8h.html#a72520b0ab0d18377eb6a481029d0b01e">GPIO_HIGH</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>線路電源ON </p>
+
+</div>
+</div>
+<a id="a555f5256b6249c98e26f6fd8fb09c270"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a555f5256b6249c98e26f6fd8fb09c270">&#9670;&nbsp;</a></span>RAIL_SUCCESS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define RAIL_SUCCESS&#160;&#160;&#160;0x00000000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>正常終了 </p>
+
+</div>
+</div>
+<h2 class="groupheader">列挙型詳解</h2>
+<a id="a35faa54a84e8414ec2c6dfa86d83d381"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35faa54a84e8414ec2c6dfa86d83d381">&#9670;&nbsp;</a></span>rail_direction_e</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">rail_direction_e</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>線路上の列車の進行方向 </p>
+<table class="fieldtable">
+<tr><th colspan="2">列挙値</th></tr><tr><td class="fieldname"><a id="a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812"></a>RAIL_STOP&#160;</td><td class="fielddoc"><p>停止 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0"></a>RAIL_FORWARD&#160;</td><td class="fielddoc"><p>前進 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c"></a>RAIL_BACKWARD&#160;</td><td class="fielddoc"><p>後進 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5"></a>RAIL_BRAKE&#160;</td><td class="fielddoc"><p>制動 </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a35faa54a84e8414ec2c6dfa86d83d381af7ffc4e718cba76055119dfa0e5974a3"></a>RAIL_DIRECTION_E_NUM&#160;</td><td class="fielddoc"><p>RAIL_DIRECTION_Eの列挙数 </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<h2 class="groupheader">関数詳解</h2>
+<a id="a65d3482c0d628a89eb23dc9c3500d539"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65d3482c0d628a89eb23dc9c3500d539">&#9670;&nbsp;</a></span>RasPi_configRailIo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RasPi_configRailIo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a>&#160;</td>
+          <td class="paramname"><em>target</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>線路制御インタフェースの設定 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>線路制御インタフェース情報 </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RAIL_SUCCESS</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">RAIL_FAILURE</td><td>異常終了 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_cgraph.png" border="0" usemap="#a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_cgraph" alt=""/></div>
+<map name="a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_cgraph" id="a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_cgraph">
+<area shape="rect" title="線路制御インタフェースの設定" alt="" coords="5,5,136,32"/>
+<area shape="rect" href="_ras_pi__ctrl_rail_io_8h.html#a35426b6a74e4d4d4bef464626b1a98bb" title="進行方向/出力制御関数" alt="" coords="184,5,299,32"/>
+</map>
+</div>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_icgraph.png" border="0" usemap="#a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_icgraph" alt=""/></div>
+<map name="a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_icgraph" id="a_ras_pi___rail_8h_a65d3482c0d628a89eb23dc9c3500d539_icgraph">
+<area shape="rect" title="線路制御インタフェースの設定" alt="" coords="104,5,235,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a35426b6a74e4d4d4bef464626b1a98bb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35426b6a74e4d4d4bef464626b1a98bb">&#9670;&nbsp;</a></span>RasPi_ctrlRailIo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RasPi_ctrlRailIo </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a>&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>direciton_req</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>pwm_duty_req</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>進行方向/出力制御関数 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">target</td><td>線路制御インタフェース情報 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">direciton_req</td><td>線路上の列車の進行方向 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">pwm_duty_req</td><td>出力制御信号のPWMデューティ </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>戻り値</dt><dd>エラー情報 </dd></dl>
+
+</div>
+</div>
+<a id="ab2ad8cf046b6b04df58843146fb4aea1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab2ad8cf046b6b04df58843146fb4aea1">&#9670;&nbsp;</a></span>RasPi_initRailIo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RasPi_initRailIo </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>線路制御インタフェースの初期化 </p>
+<dl class="retval"><dt>戻り値</dt><dd>
+  <table class="retval">
+    <tr><td class="paramname">RAIL_SUCCESS</td><td>正常終了 </td></tr>
+    <tr><td class="paramname">RAIL_FAILURE</td><td>異常終了 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+被呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="_ras_pi___rail_8h_ab2ad8cf046b6b04df58843146fb4aea1_icgraph.png" border="0" usemap="#a_ras_pi___rail_8h_ab2ad8cf046b6b04df58843146fb4aea1_icgraph" alt=""/></div>
+<map name="a_ras_pi___rail_8h_ab2ad8cf046b6b04df58843146fb4aea1_icgraph" id="a_ras_pi___rail_8h_ab2ad8cf046b6b04df58843146fb4aea1_icgraph">
+<area shape="rect" title="線路制御インタフェースの初期化" alt="" coords="104,5,219,32"/>
+<area shape="rect" href="powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>
+</div>
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c9f7e3ee279ae8752451d54dc50561d0.html">RasPi_Rail</a></li><li class="navelem"><a class="el" href="dir_8991d158a2a14016bea6c909011a89a1.html">include</a></li><li class="navelem"><a class="el" href="_ras_pi___rail_8h.html">RasPi_Rail.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

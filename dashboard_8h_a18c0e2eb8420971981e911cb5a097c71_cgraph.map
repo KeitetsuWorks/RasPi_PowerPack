@@ -1,0 +1,5 @@
+<map id="redisplayLightingVolumeNeedle" name="redisplayLightingVolumeNeedle">
+<area shape="rect" id="node1" title="常点灯出力調整ボリューム 針の表示更新" alt="" coords="5,5,209,32"/>
+<area shape="rect" id="node2" href="$dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01" title="常点灯出力調整ボリューム 針の表示" alt="" coords="257,5,436,32"/>
+<area shape="rect" id="node3" href="$meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="484,5,627,32"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="printMeter100Needle" name="printMeter100Needle">
+<area shape="rect" id="node1" title="百分率メーター 針の表示" alt="" coords="583,56,725,83"/>
+<area shape="rect" id="node2" href="$dashboard_8c.html#a834cd51d5948b46ce1946c4ad113fe01" title="常点灯出力調整ボリューム 針の表示" alt="" coords="356,31,535,57"/>
+<area shape="rect" id="node6" href="$dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a" title="速度調整ボリューム 針の表示" alt="" coords="363,81,528,108"/>
+<area shape="rect" id="node3" href="$dashboard_8h.html#a746c8ef6d09ccc38caecfa444fc35757" title="パワーパック 計器表示の初期化" alt="" coords="155,56,257,83"/>
+<area shape="rect" id="node5" href="$dashboard_8h.html#a18c0e2eb8420971981e911cb5a097c71" title="常点灯出力調整ボリューム 針の表示更新" alt="" coords="104,5,308,32"/>
+<area shape="rect" id="node4" href="$powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,56,56,83"/>
+<area shape="rect" id="node7" href="$dashboard_8h.html#aca1eb779fdf62e8845658be9aab3240d" title="速度調整ボリューム 針の表示更新" alt="" coords="111,107,301,133"/>
+</map>

@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Model Railway Power Pack using Raspberry Pi: include/powerpack.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Model Railway Power Pack using Raspberry Pi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('powerpack_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">powerpack.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="powerpack_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once    </span><span class="comment">// __POWERPACK_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#ifndef TRUE</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="powerpack_8h.html#aa8cecfc5c5c054d2875c03e77b7be15d">   19</a></span>&#160;<span class="preprocessor">#define TRUE                                1           </span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">#ifndef FALSE</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="powerpack_8h.html#aa93f0eb578d23995850d61f7d61c55c1">   23</a></span>&#160;<span class="preprocessor">#define FALSE                               0           </span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a8d5bbef82905d6f417fab12370b1d21d">   32</a></span>&#160;<span class="preprocessor">#define POWERPACK_FORWARD_PORT              22          </span></div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a2b9eec05bc35645c173c92ad8c9c8642">   33</a></span>&#160;<span class="preprocessor">#define POWERPACK_BACKWARD_PORT             23          </span></div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="powerpack_8h.html#abf2416f5c9a333bcc1c8d5419e6404aa">   34</a></span>&#160;<span class="preprocessor">#define POWERPACK_PWM_PORT                  18          </span></div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a7f94690c8f45027a9d86eaa082893ebd">   35</a></span>&#160;<span class="preprocessor">#define POWERPACK_PWM_DIVISOR               3           </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="powerpack_8h.html#af2a9157a3dc5ce2f073e139de4103e06">   36</a></span>&#160;<span class="preprocessor">#define POWERPACK_PWM_RANGE                 256         </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3d34ea27c843ad5ce69e65b675bf1ab4">   37</a></span>&#160;<span class="preprocessor">#define POWERPACK_PWM_MIN                   0           </span></div>
+<div class="line"><a name="l00038"></a><span class="lineno"><a class="line" href="powerpack_8h.html#ae456cac42fa8a6ae244f81839d43832d">   38</a></span>&#160;<span class="preprocessor">#define POWERPACK_PWM_MAX                   255         </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a5a5b9d6e14a374f09a377a193e6abd3c">   46</a></span>&#160;<span class="preprocessor">#define POWERPACK_SPEED_MIN                 0           </span></div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a2f09702abc3ed6ea863c262f2797f4da">   47</a></span>&#160;<span class="preprocessor">#define POWERPACK_SPEED_MAX                 100         </span></div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="powerpack_8h.html#acd7e119e50d24f6a565194f48ba1528c">   48</a></span>&#160;<span class="preprocessor">#define POWERPACK_SPEED_UP_STEP             1           </span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a7ed2a784d0823cdca05bae4ea2e6225a">   49</a></span>&#160;<span class="preprocessor">#define POWERPACK_SPEED_DOWN_STEP           1           </span></div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a6dd3f97efea3016fdc3e60ec48f7672f">   50</a></span>&#160;<span class="preprocessor">#define POWERPACK_LIGHT_MIN                 0           </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a07ea44fc2ceada80e4e2ec89cf7e67cd">   51</a></span>&#160;<span class="preprocessor">#define POWERPACK_LIGHT_MAX                 100         </span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="powerpack_8h.html#af5743db2f6207fe60d8a0cdc1b6ada9f">   52</a></span>&#160;<span class="preprocessor">#define POWERPACK_LIGHT_UP_STEP             1           </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3149be887427c3f29d85aa06f8f2f2a1">   53</a></span>&#160;<span class="preprocessor">#define POWERPACK_LIGHT_DOWN_STEP           1           </span></div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="powerpack_8h.html#ab28dec2690305d206980cdfdd4b0c2ac">   61</a></span>&#160;<span class="preprocessor">#define POWERPACK_TIMEOUT_PERIOD_MIN        1           </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a249baa72a9e5d766c34c63f014dd410f">   62</a></span>&#160;<span class="preprocessor">#define POWERPACK_TIMEOUT_PERIOD_MAX        3600        </span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a258f2a45add598f40951ddc61370fe4e">   63</a></span>&#160;<span class="preprocessor">#define POWERPACK_TIMEOUT_PERIOD_DEFAULT    600         </span></div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">   74</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">powerpack_operation_e</a> {</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa">   75</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa">POWERPACK_NO_OPERATION</a> = 0, </div>
+<div class="line"><a name="l00076"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82">   76</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82">POWERPACK_EXIT</a>,             </div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523">   77</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523">POWERPACK_REVERSER_FSIDE</a>,   </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c">   78</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c">POWERPACK_REVERSER_RSIDE</a>,   </div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad">   79</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad">POWERPACK_SPEED_UP</a>,         </div>
+<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8">   80</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8">POWERPACK_SPEED_DOWN</a>,       </div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652">   81</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652">POWERPACK_LIGHT_UP</a>,         </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af">   82</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af">POWERPACK_LIGHT_DOWN</a>,       </div>
+<div class="line"><a name="l00083"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c">   83</a></span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c">POWERPACK_BRAKE_E</a>,          </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <a class="code" href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a9c66f4e061b3c291cb6cc35c5b83dac6">POWERPACK_OPERATION_E_NUM</a>   </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="powerpack_8h.html#ab8a55f0b2c636b155faa9af3b2be95b4">   85</a></span>&#160;} <a class="code" href="powerpack_8h.html#ab8a55f0b2c636b155faa9af3b2be95b4">POWERPACK_OPERATION_E</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">   95</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">powerpack_reverser_e</a> {</div>
+<div class="line"><a name="l00096"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104">   96</a></span>&#160;    <a class="code" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104">POWERPACK_OFF</a> = 0,          </div>
+<div class="line"><a name="l00097"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792">   97</a></span>&#160;    <a class="code" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792">POWERPACK_FORWARD</a>,          </div>
+<div class="line"><a name="l00098"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be">   98</a></span>&#160;    <a class="code" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be">POWERPACK_REVERSE</a>,          </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <a class="code" href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aac78dff3cfc4acd27f7488eb2eabbbaf8">POWERPACK_REVERSER_E_NUM</a>    </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="powerpack_8h.html#a729f8086cc87115b2176fbe890385fcb">  100</a></span>&#160;} <a class="code" href="powerpack_8h.html#a729f8086cc87115b2176fbe890385fcb">POWERPACK_REVERSER_E</a>;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structpowerpack__t.html">  110</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structpowerpack__t.html">powerpack_t</a> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno"><a class="line" href="structpowerpack__t.html#a08f3f805a37602d10e876fa8eb053a30">  111</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpowerpack__t.html#a08f3f805a37602d10e876fa8eb053a30">reverser</a>;               </div>
+<div class="line"><a name="l00112"></a><span class="lineno"><a class="line" href="structpowerpack__t.html#a218b4f7c6cc2681a99c23a3b089d68b1">  112</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpowerpack__t.html#a218b4f7c6cc2681a99c23a3b089d68b1">speed</a>;                  </div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="structpowerpack__t.html#a840d98f11adfbaeeb77afa32ceb0e278">  113</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structpowerpack__t.html#a840d98f11adfbaeeb77afa32ceb0e278">light</a>;                  </div>
+<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">  114</a></span>&#160;} <a class="code" href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a>;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="ttc" id="apowerpack_8h_html_a3a5c3090fa381b8ca5e2ccedc593af2a"><div class="ttname"><a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2a">powerpack_reverser_e</a></div><div class="ttdeci">powerpack_reverser_e</div><div class="ttdoc">逆転ハンドルのハンドル位置</div><div class="ttdef"><b>Definition:</b> powerpack.h:95</div></div>
+<div class="ttc" id="apowerpack_8h_html_a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104"><div class="ttname"><a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa0ba6f615c7a59e49dff629be0d547104">POWERPACK_OFF</a></div><div class="ttdeci">@ POWERPACK_OFF</div><div class="ttdef"><b>Definition:</b> powerpack.h:96</div></div>
+<div class="ttc" id="apowerpack_8h_html_a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792"><div class="ttname"><a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa4f78636d3ebcc64707ddb4a43ac1d792">POWERPACK_FORWARD</a></div><div class="ttdeci">@ POWERPACK_FORWARD</div><div class="ttdef"><b>Definition:</b> powerpack.h:97</div></div>
+<div class="ttc" id="apowerpack_8h_html_a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be"><div class="ttname"><a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aa65367a509a37c8074d1fb1aa29a421be">POWERPACK_REVERSE</a></div><div class="ttdeci">@ POWERPACK_REVERSE</div><div class="ttdef"><b>Definition:</b> powerpack.h:98</div></div>
+<div class="ttc" id="apowerpack_8h_html_a3a5c3090fa381b8ca5e2ccedc593af2aac78dff3cfc4acd27f7488eb2eabbbaf8"><div class="ttname"><a href="powerpack_8h.html#a3a5c3090fa381b8ca5e2ccedc593af2aac78dff3cfc4acd27f7488eb2eabbbaf8">POWERPACK_REVERSER_E_NUM</a></div><div class="ttdeci">@ POWERPACK_REVERSER_E_NUM</div><div class="ttdef"><b>Definition:</b> powerpack.h:99</div></div>
+<div class="ttc" id="apowerpack_8h_html_a729f8086cc87115b2176fbe890385fcb"><div class="ttname"><a href="powerpack_8h.html#a729f8086cc87115b2176fbe890385fcb">POWERPACK_REVERSER_E</a></div><div class="ttdeci">enum powerpack_reverser_e POWERPACK_REVERSER_E</div><div class="ttdoc">逆転ハンドルのハンドル位置</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727">powerpack_operation_e</a></div><div class="ttdeci">powerpack_operation_e</div><div class="ttdoc">パワーパックのユーザ操作コード</div><div class="ttdef"><b>Definition:</b> powerpack.h:74</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13129932bd63a40acff9714481dd288c">POWERPACK_REVERSER_RSIDE</a></div><div class="ttdeci">@ POWERPACK_REVERSER_RSIDE</div><div class="ttdef"><b>Definition:</b> powerpack.h:78</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a13a17ddc0a9bcfca36bdd8311bc1b8a8">POWERPACK_SPEED_DOWN</a></div><div class="ttdeci">@ POWERPACK_SPEED_DOWN</div><div class="ttdef"><b>Definition:</b> powerpack.h:80</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1a7e9dacbeb9f9113acb1c23d037f523">POWERPACK_REVERSER_FSIDE</a></div><div class="ttdeci">@ POWERPACK_REVERSER_FSIDE</div><div class="ttdef"><b>Definition:</b> powerpack.h:77</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a1f0a8d75f6c931db69713a5f54b739af">POWERPACK_LIGHT_DOWN</a></div><div class="ttdeci">@ POWERPACK_LIGHT_DOWN</div><div class="ttdef"><b>Definition:</b> powerpack.h:82</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a308e89e255d3cf3bd22f4a79ed0cd652">POWERPACK_LIGHT_UP</a></div><div class="ttdeci">@ POWERPACK_LIGHT_UP</div><div class="ttdef"><b>Definition:</b> powerpack.h:81</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a40746e31622b7fa60d3df003b77a8bfa">POWERPACK_NO_OPERATION</a></div><div class="ttdeci">@ POWERPACK_NO_OPERATION</div><div class="ttdef"><b>Definition:</b> powerpack.h:75</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727a9c66f4e061b3c291cb6cc35c5b83dac6"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727a9c66f4e061b3c291cb6cc35c5b83dac6">POWERPACK_OPERATION_E_NUM</a></div><div class="ttdeci">@ POWERPACK_OPERATION_E_NUM</div><div class="ttdef"><b>Definition:</b> powerpack.h:84</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727ac1bb8800a09033e130527c744de4b60c">POWERPACK_BRAKE_E</a></div><div class="ttdeci">@ POWERPACK_BRAKE_E</div><div class="ttdef"><b>Definition:</b> powerpack.h:83</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727acefd61f53846de78ccb4772ae3068e82">POWERPACK_EXIT</a></div><div class="ttdeci">@ POWERPACK_EXIT</div><div class="ttdef"><b>Definition:</b> powerpack.h:76</div></div>
+<div class="ttc" id="apowerpack_8h_html_a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad"><div class="ttname"><a href="powerpack_8h.html#a9f481c290641f707c9c587ac4a08c727af17b5d459b0f4aadb5e6140dfd239aad">POWERPACK_SPEED_UP</a></div><div class="ttdeci">@ POWERPACK_SPEED_UP</div><div class="ttdef"><b>Definition:</b> powerpack.h:79</div></div>
+<div class="ttc" id="apowerpack_8h_html_ab8a55f0b2c636b155faa9af3b2be95b4"><div class="ttname"><a href="powerpack_8h.html#ab8a55f0b2c636b155faa9af3b2be95b4">POWERPACK_OPERATION_E</a></div><div class="ttdeci">enum powerpack_operation_e POWERPACK_OPERATION_E</div><div class="ttdoc">パワーパックのユーザ操作コード</div></div>
+<div class="ttc" id="apowerpack_8h_html_acc44d60af2cb477e12c1fc45ffffbf28"><div class="ttname"><a href="powerpack_8h.html#acc44d60af2cb477e12c1fc45ffffbf28">POWERPACK_T</a></div><div class="ttdeci">struct powerpack_t POWERPACK_T</div><div class="ttdoc">パワーパックの状態管理構造体</div></div>
+<div class="ttc" id="astructpowerpack__t_html"><div class="ttname"><a href="structpowerpack__t.html">powerpack_t</a></div><div class="ttdoc">パワーパックの状態管理構造体</div><div class="ttdef"><b>Definition:</b> powerpack.h:110</div></div>
+<div class="ttc" id="astructpowerpack__t_html_a08f3f805a37602d10e876fa8eb053a30"><div class="ttname"><a href="structpowerpack__t.html#a08f3f805a37602d10e876fa8eb053a30">powerpack_t::reverser</a></div><div class="ttdeci">int reverser</div><div class="ttdef"><b>Definition:</b> powerpack.h:111</div></div>
+<div class="ttc" id="astructpowerpack__t_html_a218b4f7c6cc2681a99c23a3b089d68b1"><div class="ttname"><a href="structpowerpack__t.html#a218b4f7c6cc2681a99c23a3b089d68b1">powerpack_t::speed</a></div><div class="ttdeci">int speed</div><div class="ttdef"><b>Definition:</b> powerpack.h:112</div></div>
+<div class="ttc" id="astructpowerpack__t_html_a840d98f11adfbaeeb77afa32ceb0e278"><div class="ttname"><a href="structpowerpack__t.html#a840d98f11adfbaeeb77afa32ceb0e278">powerpack_t::light</a></div><div class="ttdeci">int light</div><div class="ttdef"><b>Definition:</b> powerpack.h:113</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="powerpack_8h.html">powerpack.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

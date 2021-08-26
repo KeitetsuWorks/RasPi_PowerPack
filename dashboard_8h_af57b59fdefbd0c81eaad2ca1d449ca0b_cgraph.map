@@ -1,0 +1,4 @@
+<map id="redisplayPowerPackStatus" name="redisplayPowerPackStatus">
+<area shape="rect" id="node1" title="パワーパックの状態 テキスト表示更新" alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$dashboard_8c.html#aa9b9414d4c59e051635890077a430d6d" title="パワーパックの状態 テキスト表示" alt="" coords="232,5,384,32"/>
+</map>

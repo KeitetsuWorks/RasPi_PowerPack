@@ -1,0 +1,4 @@
+<map id="initPowerPackRailIoInfo" name="initPowerPackRailIoInfo">
+<area shape="rect" id="node1" title="パワーパックの線路制御インタフェース情報の初期化" alt="" coords="104,5,265,32"/>
+<area shape="rect" id="node2" href="$powerpack_8c.html#a0ddf1224851353fc92bfbff6f499fa97" title="メイン関数" alt="" coords="5,5,56,32"/>
+</map>

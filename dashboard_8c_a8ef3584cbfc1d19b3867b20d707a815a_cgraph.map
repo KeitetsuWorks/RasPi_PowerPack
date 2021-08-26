@@ -1,0 +1,4 @@
+<map id="printSpeedometerNeedle" name="printSpeedometerNeedle">
+<area shape="rect" id="node1" title="速度調整ボリューム 針の表示" alt="" coords="5,5,171,32"/>
+<area shape="rect" id="node2" href="$meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="219,5,361,32"/>
+</map>

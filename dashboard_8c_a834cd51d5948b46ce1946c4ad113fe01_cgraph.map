@@ -1,0 +1,4 @@
+<map id="printLightingVolumeNeedle" name="printLightingVolumeNeedle">
+<area shape="rect" id="node1" title="常点灯出力調整ボリューム 針の表示" alt="" coords="5,5,184,32"/>
+<area shape="rect" id="node2" href="$meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="232,5,375,32"/>
+</map>

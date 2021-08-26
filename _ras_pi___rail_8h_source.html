@@ -1,0 +1,178 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.9.1"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Model Railway Power Pack using Raspberry Pi: RasPi_Rail/include/RasPi_Rail.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Model Railway Power Pack using Raspberry Pi
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.9.1 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索','.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('_ras_pi___rail_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">RasPi_Rail.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_ras_pi___rail_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#pragma once    </span><span class="comment">// __RASPI_RAIL_H__</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a555f5256b6249c98e26f6fd8fb09c270">   18</a></span>&#160;<span class="preprocessor">#define RAIL_SUCCESS                0x00000000      </span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#ad61a26374bf2f854194c187a785fe924">   19</a></span>&#160;<span class="preprocessor">#define RAIL_FAILURE                0x00000001      </span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a8380207eb2b4b9ae72fddbb18c5c39d7">   27</a></span>&#160;<span class="preprocessor">#define RAIL_INVALID_DIRECTION      0x00000002      </span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a7879c138db4b2dcf15d5572337eaf6f2">   28</a></span>&#160;<span class="preprocessor">#define RAIL_INVALID_PWM_DUTY       0x00000004      </span></div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a088e681cae6659dfd317afdf4d61e302">   36</a></span>&#160;<span class="preprocessor">#define GPIO_LOW                    0               </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a72520b0ab0d18377eb6a481029d0b01e">   37</a></span>&#160;<span class="preprocessor">#define GPIO_HIGH                   1               </span></div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a8bcfa0f39bf711dbaa70599899e0f10a">   45</a></span>&#160;<span class="preprocessor">#define RAIL_POWER_OFF              GPIO_LOW        </span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a5ac68b227b0116fdbec845051df242c7">   46</a></span>&#160;<span class="preprocessor">#define RAIL_POWER_ON               GPIO_HIGH       </span></div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">   57</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">rail_direction_e</a> {</div>
+<div class="line"><a name="l00058"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812">   58</a></span>&#160;    <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812">RAIL_STOP</a> = 0,              </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0">   59</a></span>&#160;    <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0">RAIL_FORWARD</a>,               </div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c">   60</a></span>&#160;    <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c">RAIL_BACKWARD</a>,              </div>
+<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5">   61</a></span>&#160;    <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5">RAIL_BRAKE</a>,                 </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <a class="code" href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381af7ffc4e718cba76055119dfa0e5974a3">RAIL_DIRECTION_E_NUM</a>        </div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#afb7e66b98c7b3cf55d6ed467767454ce">   63</a></span>&#160;} <a class="code" href="_ras_pi___rail_8h.html#afb7e66b98c7b3cf55d6ed467767454ce">RAIL_DIRECTION_E</a>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structrail__gpio__t.html">   73</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrail__gpio__t.html">rail_gpio_t</a> {</div>
+<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="structrail__gpio__t.html#a63c89c04d1feae07ca35558055155ffb">   74</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__gpio__t.html#a63c89c04d1feae07ca35558055155ffb">port</a>;                   </div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a00c07f6d473a95275de9e5a74a188c09">   75</a></span>&#160;} <a class="code" href="_ras_pi___rail_8h.html#a00c07f6d473a95275de9e5a74a188c09">RAIL_GPIO_T</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html">   85</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrail__pwm__t.html">rail_pwm_t</a> {</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html#a63c89c04d1feae07ca35558055155ffb">   86</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__pwm__t.html#a63c89c04d1feae07ca35558055155ffb">port</a>;                   </div>
+<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html#ad362123fcdb15f3024b9e7d2a718c508">   87</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__pwm__t.html#ad362123fcdb15f3024b9e7d2a718c508">divisor</a>;                </div>
+<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html#a037e8e370380046bec287bdc96942091">   88</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__pwm__t.html#a037e8e370380046bec287bdc96942091">range</a>;                  </div>
+<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html#a3e202b201e6255d975cd6d3aff1f5a4d">   89</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__pwm__t.html#a3e202b201e6255d975cd6d3aff1f5a4d">min</a>;                    </div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="structrail__pwm__t.html#ae1e1dde676c120fa6d10f3bb2c14059e">   90</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="structrail__pwm__t.html#ae1e1dde676c120fa6d10f3bb2c14059e">max</a>;                    </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#ae7d768ef945a9d91742df853d92da27a">   91</a></span>&#160;} <a class="code" href="_ras_pi___rail_8h.html#ae7d768ef945a9d91742df853d92da27a">RAIL_PWM_T</a>;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="structrail__io__t.html">  101</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structrail__io__t.html">rail_io_t</a> {</div>
+<div class="line"><a name="l00102"></a><span class="lineno"><a class="line" href="structrail__io__t.html#a3570df3c5c2eff2127132b26695f2468">  102</a></span>&#160;    <a class="code" href="structrail__gpio__t.html">RAIL_GPIO_T</a> <a class="code" href="structrail__io__t.html#a3570df3c5c2eff2127132b26695f2468">forward</a>;        </div>
+<div class="line"><a name="l00103"></a><span class="lineno"><a class="line" href="structrail__io__t.html#afd81c807a9112faadc9f49c4d5dfedff">  103</a></span>&#160;    <a class="code" href="structrail__gpio__t.html">RAIL_GPIO_T</a> <a class="code" href="structrail__io__t.html#afd81c807a9112faadc9f49c4d5dfedff">backward</a>;       </div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="structrail__io__t.html#a7cc01ef7d02b66a5ec7d25a5cc97c481">  104</a></span>&#160;    <a class="code" href="structrail__pwm__t.html">RAIL_PWM_T</a> <a class="code" href="structrail__io__t.html#a7cc01ef7d02b66a5ec7d25a5cc97c481">pwm</a>;             </div>
+<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">  105</a></span>&#160;} <a class="code" href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a>;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160; </div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">// RasPi_RailIo.h</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="comment"></span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="_ras_pi___rail_8h.html#ab2ad8cf046b6b04df58843146fb4aea1">RasPi_initRailIo</a>(<span class="keywordtype">void</span>);</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="_ras_pi___rail_8h.html#a65d3482c0d628a89eb23dc9c3500d539">RasPi_configRailIo</a>(<a class="code" href="structrail__io__t.html">RAIL_IO_T</a> target);</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;<span class="comment">// RasPi_ctrlRailIo.h</span></div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;<span class="comment"></span><span class="keyword">extern</span> <span class="keywordtype">int</span> <a class="code" href="_ras_pi___rail_8h.html#a35426b6a74e4d4d4bef464626b1a98bb">RasPi_ctrlRailIo</a>(</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;        <a class="code" href="structrail__io__t.html">RAIL_IO_T</a> target,</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;        <span class="keywordtype">int</span> direciton_req,</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;        <span class="keywordtype">int</span> pwm_duty_req);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a00c07f6d473a95275de9e5a74a188c09"><div class="ttname"><a href="_ras_pi___rail_8h.html#a00c07f6d473a95275de9e5a74a188c09">RAIL_GPIO_T</a></div><div class="ttdeci">struct rail_gpio_t RAIL_GPIO_T</div><div class="ttdoc">GPIOポートの情報</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35426b6a74e4d4d4bef464626b1a98bb"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35426b6a74e4d4d4bef464626b1a98bb">RasPi_ctrlRailIo</a></div><div class="ttdeci">int RasPi_ctrlRailIo(RAIL_IO_T target, int direciton_req, int pwm_duty_req)</div><div class="ttdoc">進行方向/出力制御関数</div><div class="ttdef"><b>Definition:</b> RasPi_ctrlRailIo.c:18</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381">rail_direction_e</a></div><div class="ttdeci">rail_direction_e</div><div class="ttdoc">線路上の列車の進行方向</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:57</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381a043d5d226afb6ab422240b995783a812">RAIL_STOP</a></div><div class="ttdeci">@ RAIL_STOP</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:58</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381aa17c3c3d1dc686b30e268020cb63a1f0">RAIL_FORWARD</a></div><div class="ttdeci">@ RAIL_FORWARD</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:59</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381ab431f91fc6b6b4f88a6f8777c2d0d51c">RAIL_BACKWARD</a></div><div class="ttdeci">@ RAIL_BACKWARD</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:60</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381abec66bd9896c3a6a1c611d982ef974c5">RAIL_BRAKE</a></div><div class="ttdeci">@ RAIL_BRAKE</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:61</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a35faa54a84e8414ec2c6dfa86d83d381af7ffc4e718cba76055119dfa0e5974a3"><div class="ttname"><a href="_ras_pi___rail_8h.html#a35faa54a84e8414ec2c6dfa86d83d381af7ffc4e718cba76055119dfa0e5974a3">RAIL_DIRECTION_E_NUM</a></div><div class="ttdeci">@ RAIL_DIRECTION_E_NUM</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:62</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a5c7cacffa33c9ce96ae3fdd841b68bbb"><div class="ttname"><a href="_ras_pi___rail_8h.html#a5c7cacffa33c9ce96ae3fdd841b68bbb">RAIL_IO_T</a></div><div class="ttdeci">struct rail_io_t RAIL_IO_T</div><div class="ttdoc">線路制御インタフェース情報</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_a65d3482c0d628a89eb23dc9c3500d539"><div class="ttname"><a href="_ras_pi___rail_8h.html#a65d3482c0d628a89eb23dc9c3500d539">RasPi_configRailIo</a></div><div class="ttdeci">int RasPi_configRailIo(RAIL_IO_T target)</div><div class="ttdoc">線路制御インタフェースの設定</div><div class="ttdef"><b>Definition:</b> RasPi_RailIo.c:47</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_ab2ad8cf046b6b04df58843146fb4aea1"><div class="ttname"><a href="_ras_pi___rail_8h.html#ab2ad8cf046b6b04df58843146fb4aea1">RasPi_initRailIo</a></div><div class="ttdeci">int RasPi_initRailIo(void)</div><div class="ttdoc">線路制御インタフェースの初期化</div><div class="ttdef"><b>Definition:</b> RasPi_RailIo.c:18</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_ae7d768ef945a9d91742df853d92da27a"><div class="ttname"><a href="_ras_pi___rail_8h.html#ae7d768ef945a9d91742df853d92da27a">RAIL_PWM_T</a></div><div class="ttdeci">struct rail_pwm_t RAIL_PWM_T</div><div class="ttdoc">PWMポートの情報</div></div>
+<div class="ttc" id="a_ras_pi___rail_8h_html_afb7e66b98c7b3cf55d6ed467767454ce"><div class="ttname"><a href="_ras_pi___rail_8h.html#afb7e66b98c7b3cf55d6ed467767454ce">RAIL_DIRECTION_E</a></div><div class="ttdeci">enum rail_direction_e RAIL_DIRECTION_E</div><div class="ttdoc">線路上の列車の進行方向</div></div>
+<div class="ttc" id="astructrail__gpio__t_html"><div class="ttname"><a href="structrail__gpio__t.html">rail_gpio_t</a></div><div class="ttdoc">GPIOポートの情報</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:73</div></div>
+<div class="ttc" id="astructrail__gpio__t_html_a63c89c04d1feae07ca35558055155ffb"><div class="ttname"><a href="structrail__gpio__t.html#a63c89c04d1feae07ca35558055155ffb">rail_gpio_t::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:74</div></div>
+<div class="ttc" id="astructrail__io__t_html"><div class="ttname"><a href="structrail__io__t.html">rail_io_t</a></div><div class="ttdoc">線路制御インタフェース情報</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:101</div></div>
+<div class="ttc" id="astructrail__io__t_html_a3570df3c5c2eff2127132b26695f2468"><div class="ttname"><a href="structrail__io__t.html#a3570df3c5c2eff2127132b26695f2468">rail_io_t::forward</a></div><div class="ttdeci">RAIL_GPIO_T forward</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:102</div></div>
+<div class="ttc" id="astructrail__io__t_html_a7cc01ef7d02b66a5ec7d25a5cc97c481"><div class="ttname"><a href="structrail__io__t.html#a7cc01ef7d02b66a5ec7d25a5cc97c481">rail_io_t::pwm</a></div><div class="ttdeci">RAIL_PWM_T pwm</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:104</div></div>
+<div class="ttc" id="astructrail__io__t_html_afd81c807a9112faadc9f49c4d5dfedff"><div class="ttname"><a href="structrail__io__t.html#afd81c807a9112faadc9f49c4d5dfedff">rail_io_t::backward</a></div><div class="ttdeci">RAIL_GPIO_T backward</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:103</div></div>
+<div class="ttc" id="astructrail__pwm__t_html"><div class="ttname"><a href="structrail__pwm__t.html">rail_pwm_t</a></div><div class="ttdoc">PWMポートの情報</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:85</div></div>
+<div class="ttc" id="astructrail__pwm__t_html_a037e8e370380046bec287bdc96942091"><div class="ttname"><a href="structrail__pwm__t.html#a037e8e370380046bec287bdc96942091">rail_pwm_t::range</a></div><div class="ttdeci">int range</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:88</div></div>
+<div class="ttc" id="astructrail__pwm__t_html_a3e202b201e6255d975cd6d3aff1f5a4d"><div class="ttname"><a href="structrail__pwm__t.html#a3e202b201e6255d975cd6d3aff1f5a4d">rail_pwm_t::min</a></div><div class="ttdeci">int min</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:89</div></div>
+<div class="ttc" id="astructrail__pwm__t_html_a63c89c04d1feae07ca35558055155ffb"><div class="ttname"><a href="structrail__pwm__t.html#a63c89c04d1feae07ca35558055155ffb">rail_pwm_t::port</a></div><div class="ttdeci">int port</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:86</div></div>
+<div class="ttc" id="astructrail__pwm__t_html_ad362123fcdb15f3024b9e7d2a718c508"><div class="ttname"><a href="structrail__pwm__t.html#ad362123fcdb15f3024b9e7d2a718c508">rail_pwm_t::divisor</a></div><div class="ttdeci">int divisor</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:87</div></div>
+<div class="ttc" id="astructrail__pwm__t_html_ae1e1dde676c120fa6d10f3bb2c14059e"><div class="ttname"><a href="structrail__pwm__t.html#ae1e1dde676c120fa6d10f3bb2c14059e">rail_pwm_t::max</a></div><div class="ttdeci">int max</div><div class="ttdef"><b>Definition:</b> RasPi_Rail.h:90</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_c9f7e3ee279ae8752451d54dc50561d0.html">RasPi_Rail</a></li><li class="navelem"><a class="el" href="dir_8991d158a2a14016bea6c909011a89a1.html">include</a></li><li class="navelem"><a class="el" href="_ras_pi___rail_8h.html">RasPi_Rail.h</a></li>
+    <li class="footer">構築: <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1 </li>
+  </ul>
+</div>
+</body>
+</html>

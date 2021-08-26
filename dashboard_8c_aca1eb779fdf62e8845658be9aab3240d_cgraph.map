@@ -1,0 +1,5 @@
+<map id="redisplaySpeedometerNeedle" name="redisplaySpeedometerNeedle">
+<area shape="rect" id="node1" title="速度調整ボリューム 針の表示更新" alt="" coords="5,5,196,32"/>
+<area shape="rect" id="node2" href="$dashboard_8c.html#a8ef3584cbfc1d19b3867b20d707a815a" title="速度調整ボリューム 針の表示" alt="" coords="244,5,409,32"/>
+<area shape="rect" id="node3" href="$meter_8h.html#ab988eef24722fde9e9be2f26cdff5618" title="百分率メーター 針の表示" alt="" coords="457,5,600,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="initSimpleDashboard" name="initSimpleDashboard">
+<area shape="rect" id="node1" title="パワーパック 計器表示の初期化（シンプル表示）" alt="" coords="5,31,147,57"/>
+<area shape="rect" id="node2" href="$dashboard__simple_8c.html#ad62602210fced426a9686659799a7a26" title="出力制御信号のPWMデューティ テキスト表示" alt="" coords="195,5,387,32"/>
+<area shape="rect" id="node3" href="$dashboard__simple_8c.html#aa9b9414d4c59e051635890077a430d6d" title="パワーパックの状態 テキスト表示" alt="" coords="215,56,367,83"/>
+</map>
